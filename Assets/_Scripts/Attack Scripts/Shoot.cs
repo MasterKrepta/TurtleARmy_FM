@@ -2,35 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shoot : MonoBehaviour
+public class Shoot : MonoBehaviour, IAction
 {
     [SerializeField] GameObject Bullet_PF;
     [SerializeField] Transform barrel;
     [SerializeField] Transform particle;
-    EnemyMove enemyMove;
+    DetectTarget detectTarget;
 
+    private void Awake() {
+        detectTarget = transform.GetComponentInParent<DetectTarget>();
+    }
     private void OnEnable() {
-        //TODO this wont be reusable for the player REALLY need to refactor it. 
-        enemyMove = transform.GetComponentInParent<EnemyMove>();
-        enemyMove.On_AbilityActivate += Fire;
+        
+        detectTarget.On_AbilityActivate += PeformAction;
     }
     private void OnDisable() {
-        enemyMove.On_AbilityActivate -= Fire;
+        detectTarget.On_AbilityActivate -= PeformAction;
     }
 
-    private void Fire() {
+    public void PeformAction() {
         Instantiate(Bullet_PF, barrel.position, Quaternion.identity);
-        
-        //print($"Fire for GO: {this.name}");
 
+        //print($"Fire for GO: {this.name}");
     }
 
-    //private void SetTag(MoveForward mf) {
-    //    mf.enabled = false;
-    //    print(this.tag);
-    //    if (this.CompareTag("Enemy")) {
-    //        mf.Player = false;
-    //    }
-    //    mf.enabled = true;
-    //}
 }

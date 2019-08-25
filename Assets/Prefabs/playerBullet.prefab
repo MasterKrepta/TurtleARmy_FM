@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6549312942367367548}
   - component: {fileID: 6549312942367367549}
   - component: {fileID: 6549312942367367550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: playerBullet
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1fa53a827df2d6a46a249951414ad198, type: 2}
+  - {fileID: 2100000, guid: 4ecf995518940334081651f0a4a5cebf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,7 +93,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 18.57
+  m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6549312942367367549
 MonoBehaviour:
@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20877e9a1a90ca54f89401a76cf1c93c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmgAmount: 1
+  dmgAmount: 2

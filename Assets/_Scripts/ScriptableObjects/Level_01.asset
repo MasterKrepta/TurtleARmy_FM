@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96634e1cee6dfcc47b8ac7614746934e, type: 3}
+  m_Name: Level_01
+  m_EditorClassIdentifier: 
+  LevelName: Level_01
+  EnemyTypes:
+  - {fileID: 8905668614926316912, guid: 5cf682224d674764b93b7ab37baaa6d4, type: 3}
+  SpawnRate: 10
+  BaseHealth: 200
