@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 1345997780137390884}
   - component: {fileID: -5136541352483323965}
   - component: {fileID: 100906162}
+  - component: {fileID: 5243825826723984775}
   m_Layer: 8
   m_Name: 1_MeleeTurtle
   m_TagString: Player
@@ -251,7 +252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 289919e32813db546ba6595301041258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 875a9830eb097584fbfac121257ab647, type: 2}
   TurtleState: 0
 --- !u!114 &1345997780137390884
 MonoBehaviour:
@@ -266,8 +266,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 34474232808694107}
-  MaxHealth: 10
-  currentHealth: 0
 --- !u!114 &-5136541352483323965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,6 +295,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 189cba21813d30143a4f609d37abbae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5243825826723984775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224970153713450337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0a78b808e6c9a478c9562f7a77330c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data: {fileID: 11400000, guid: 875a9830eb097584fbfac121257ab647, type: 2}
 --- !u!1 &5892352478391190998
 GameObject:
   m_ObjectHideFlags: 0

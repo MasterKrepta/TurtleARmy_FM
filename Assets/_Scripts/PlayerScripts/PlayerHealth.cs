@@ -3,27 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour, IHasHealth
 {
     [SerializeField] Image image;
-    [SerializeField] float MaxHealth;
 
-    [SerializeField] float currentHealth;
+    public float MaxHealth { get; set; }
+    public float CurrentHealth { get; set; }
 
     private void OnEnable() {
-               currentHealth = MaxHealth;
-        image.fillAmount = currentHealth / MaxHealth;
+        MaxHealth = GetComponent<MinionData>().Data.Health;
+        CurrentHealth = MaxHealth;
+        image.fillAmount = CurrentHealth / MaxHealth;
     }
 
-    public void TakeDamage(int dmgAmount) {
-        currentHealth -= dmgAmount;
+    public void TakeDamage(float dmgAmount) {
+        CurrentHealth -= dmgAmount;
         UpdateHealthUI();
-        if (currentHealth <= 0) {
+        if (CurrentHealth <= 0) {
             Destroy(gameObject);
         }
     }
 
     private void UpdateHealthUI() {
-        image.fillAmount = currentHealth / MaxHealth;
+        image.fillAmount = CurrentHealth / MaxHealth;
     }
 }

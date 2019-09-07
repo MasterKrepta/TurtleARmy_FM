@@ -284,6 +284,7 @@ GameObject:
   - component: {fileID: 1230171041}
   - component: {fileID: 576710278}
   - component: {fileID: 576710284}
+  - component: {fileID: 3162638643716923552}
   m_Layer: 9
   m_Name: Swat
   m_TagString: Enemy
@@ -395,8 +396,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2496617105815986358}
-  MaxHealth: 18
-  currentHealth: 0
+--- !u!114 &3162638643716923552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8905668614926316912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0a78b808e6c9a478c9562f7a77330c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data: {fileID: 11400000, guid: eca0286db053dee4a86d7594cc3bf699, type: 2}
 --- !u!1001 &7352722742162538114
 PrefabInstance:
   m_ObjectHideFlags: 0

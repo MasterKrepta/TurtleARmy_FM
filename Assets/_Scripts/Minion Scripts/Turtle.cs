@@ -5,12 +5,14 @@ using UnityEngine;
 [RequireComponent (typeof(Rigidbody))]
 public class Turtle : MonoBehaviour
 {
-
-    [SerializeField] Minion stats;
     Rigidbody rb;
     float speed;
 
-    public Minion Stats => stats;
+    
+
+
+
+  
     public enum turtleState
     {
         MOVING, ATTACKING, DEAD
@@ -27,7 +29,7 @@ public class Turtle : MonoBehaviour
         
     }
     private void Awake() {
-        speed = stats.Movespeed;
+        speed = GetComponent<MinionData>().Data.Movespeed;
         rb = GetComponent<Rigidbody>();
     }
 
@@ -48,6 +50,6 @@ public class Turtle : MonoBehaviour
         //        break;
         //}
     }
-    
+
     
 }

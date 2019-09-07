@@ -5,16 +5,14 @@ using UnityEngine;
 
 public class EnemyMove : MonoBehaviour
 {
-    
-
-    [SerializeField] float speed = 30f;
+    [SerializeField] float speed;
     Rigidbody rb;
     DetectTarget detectTarget;
 
-
-
+  
     void Awake()
     {
+        speed = GetComponent<MinionData>().Data.Movespeed;
         detectTarget = GetComponent<DetectTarget>();
         rb = GetComponent<Rigidbody>();
     }

@@ -20,7 +20,7 @@ public class MeleeAttack : MonoBehaviour, IAction
     }
     public void PeformAction() {
         //TODO play the animation and use a colider to cause damage
-        anim.SetTrigger("BlockTrigger");
+        anim.SetTrigger("MeleeTrigger");
         
     }
 

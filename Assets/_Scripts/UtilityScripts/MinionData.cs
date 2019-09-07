@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public interface IHasStats
+public class MinionData : MonoBehaviour
 {
+    public Minion Data;
     
-
-    void ConfigureStats();
 }

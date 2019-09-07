@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class CauseMeleeDamage : MonoBehaviour
 {
-    [SerializeField] int dmgAmount = 1;
+    [SerializeField] float dmgAmount = 1;
+
+    private void OnEnable() {
+        dmgAmount = GetComponentInParent<MinionData>().Data.AttackPower;
+    }
 
     private void OnTriggerEnter(Collider other) {
         IHasHealth otherHealth = other.GetComponent<IHasHealth>();
