@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,17 +12,8 @@ public class PlayerHealth : MonoBehaviour, IHasHealth
 
     private void OnEnable() {
         MaxHealth = GetComponent<MinionData>().Data.Health;
-        SceneManagement.OnLevelOver += DisableHealth;
         CurrentHealth = MaxHealth;
         image.fillAmount = CurrentHealth / MaxHealth;
-    }
-    private void OnDisable() {
-        SceneManagement.OnLevelOver -= DisableHealth;
-    }
-    
-
-    private void DisableHealth() {
-        this.enabled = false;
     }
 
     public void TakeDamage(float dmgAmount) {
