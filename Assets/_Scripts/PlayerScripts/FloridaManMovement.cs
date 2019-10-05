@@ -31,10 +31,10 @@ public class FloridaManMovement : MonoBehaviour
     }
 
      private void RotatePlayer() {
-        if (Input.GetAxisRaw("Horizontal") > 0) {
+        if (CrossPlatformInputManager.GetAxisRaw("Horizontal") > 0) {
             transform.rotation = Quaternion.Euler(0f, 0, 0f);
         }
-        else if (Input.GetAxisRaw("Horizontal") < 0) {
+        else if (CrossPlatformInputManager.GetAxisRaw("Horizontal") < 0) {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
         }
