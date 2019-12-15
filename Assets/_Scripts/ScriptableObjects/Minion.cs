@@ -11,4 +11,5 @@ public class Minion : ScriptableObject
     public float AttackPower = 1f;
     public float AttackDelay = 1f;
     public float Health = 10f;
+    public int UpgradeLevel = 0;
 }

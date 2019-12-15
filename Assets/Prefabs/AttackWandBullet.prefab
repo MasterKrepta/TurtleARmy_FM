@@ -121,5 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9f6f5c2f249a446a2f5f3d509e4f46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmgAmount: 1
+  dmgAmount: 4
   durability: 3

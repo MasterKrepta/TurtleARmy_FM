@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour, IHasHealth
+public class EnemyHealth : MonoBehaviour, IHasHealth
 {
     [SerializeField] Image image;
 
@@ -31,6 +31,7 @@ public class Health : MonoBehaviour, IHasHealth
         if (CurrentHealth <= 0) {
             Destroy(gameObject);
             PlayerProgress.Instance.GiveCredits(5);
+            PlayerProgress.Instance.EarnXP(1);
         }
     }
 

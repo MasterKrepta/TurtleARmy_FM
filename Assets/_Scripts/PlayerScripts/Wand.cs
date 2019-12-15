@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Wand : MonoBehaviour
 {
-    [SerializeField] WandData wandData;
+    public WandData wandData;
     [SerializeField] Transform wandCastPoint;
     float nextCastTime = 0;
 
