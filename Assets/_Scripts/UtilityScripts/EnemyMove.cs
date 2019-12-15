@@ -17,7 +17,7 @@ public class EnemyMove : MonoBehaviour
 
     void Awake()
     {
-        speed = GetComponent<MinionData>().Data.Movespeed;
+        speed = GetComponent<MinionData>().Data.MoveSpeed;
         detectTarget = GetComponent<DetectTarget>();
         rb = GetComponent<Rigidbody>();
     }

@@ -71,15 +71,9 @@ public class PlayerProgress : MonoBehaviour
 
 	private void LevelUp()
 	{
-		
-		
-		
 		//Adjust experiance to prevent rollover loss
-		//2: Show three options
 		LevelUpMenu.Instance.ActivateLevelUpMenu();
-		//3: upgrade option chosen
-		//4: resume gameplay
-		
+
 	}
 
 	private bool CanLevelUp()
@@ -91,31 +85,33 @@ public class PlayerProgress : MonoBehaviour
 		return false;
 	}
 
-	public  void GiveCredits(int creditsToGive)
-	{
-		CreditBalance += creditsToGive;
-	}
+	#region /* Credit System */
+		public void GiveCredits(int creditsToGive)
+		{
+			CreditBalance += creditsToGive;
+		}
 
-	public  void SpendCredits(int creditsToSpend)
-	{
-		if (CanSpend(creditsToSpend))
+		public  void SpendCredits(int creditsToSpend)
 		{
-			CreditBalance -= creditsToSpend;
-		}
-		else
-		{
-			Debug.Log($"Can not afford {creditsToSpend}");
-		}
+			if (CanSpend(creditsToSpend))
+			{
+				CreditBalance -= creditsToSpend;
+			}
+			else
+			{
+				Debug.Log($"Can not afford {creditsToSpend}");
+			}
 		
-	}
+		}
 
 	
-	public bool CanSpend(int amountToSpend)
-	{
-		if (amountToSpend > CreditBalance)
+		public bool CanSpend(int amountToSpend)
 		{
-			return true;
+			if (amountToSpend > CreditBalance)
+			{
+				return true;
+			}
+			return false;
 		}
-		return false;
-	}
+	#endregion
 }

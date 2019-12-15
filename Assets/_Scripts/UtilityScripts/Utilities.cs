@@ -8,10 +8,7 @@ public static class Utilities
     public static bool Paused = false;
     public static Action OnGamePause =() => { PauseToggle(); };
 
-    
-
-
-    public static void PauseToggle()
+    static void PauseToggle()
     {
         Paused = !Paused;
     }

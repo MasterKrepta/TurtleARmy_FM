@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,8 +34,8 @@ public class LevelUpMenu : MonoBehaviour
         Minion_6,
         Minion_7,
         Minion_8,
-        FloridaMan,
-        Wand
+        FloridaMan
+        
     }
     enum StatToUpgrade
     {
@@ -51,11 +50,13 @@ public class LevelUpMenu : MonoBehaviour
     string statName = "";
     string message;
 
-    MinionToUpgrade currentMinon;
+    //MinionToUpgrade currentMinon;
     StatToUpgrade currentStat;
-    
+    Minion currentMinion;
 
-    [SerializeField]List<GameObject> minions_SO = new List<GameObject>();
+    
+    
+    [SerializeField] List<Minion> Upgradables = new List<Minion>();
     // Start is called before the first frame update
     void Start()
     {
@@ -80,49 +81,10 @@ public class LevelUpMenu : MonoBehaviour
 
     void AssignRandomMinion()
     {
-        currentMinon = (MinionToUpgrade)UnityEngine.Random.Range(0, sizeof(MinionToUpgrade));
-        minionName = currentMinon.ToString();
+        currentMinion = Upgradables[ Random.Range(0, Upgradables.Count)];
+        minionName = currentMinion.name;
         AssignRandomStat();
-        //TODO figure out the order this is done to minimize code
 
-        //! This code is wrong, WE dont want to upgrade anything until we hit the button and make our selection
-        switch (currentMinon)
-        {
-            //TODO determine these values a better way
-            case MinionToUpgrade.MeleeTurtle:
-                //minions_SO[0].GetComponent<MinionData>().Data.Movespeed++;
-                break;
-            case MinionToUpgrade.RangeTurtle:
-                //minions_SO[1].GetComponent<MinionData>().Data.AttackPower++; //Todo This nees set to the bullet not the turtle
-                break;
-            case MinionToUpgrade.SleepyTom:
-                //todo Sleepy toms attacks would be useless so i need to control for this to not be an option
-                break;
-            case MinionToUpgrade.Minion_4:
-               // minions_SO[3].GetComponent<MinionData>().Data.Health++;
-                break;
-            case MinionToUpgrade.Minion_5:
-                //minions_SO[4].GetComponent<MinionData>().Data.Health++;
-                break;
-            case MinionToUpgrade.Minion_6:
-                //minions_SO[5].GetComponent<MinionData>().Data.Health++;
-                break;
-            case MinionToUpgrade.Minion_7:
-                //minions_SO[6].GetComponent<MinionData>().Data.Health++;
-                break;
-            case MinionToUpgrade.Minion_8:
-                //minions_SO[7].GetComponent<MinionData>().Data.Health++;
-                break;
-         
-            case MinionToUpgrade.FloridaMan:
-                //minions_SO[8].GetComponent<MinionData>().Data.Health++;
-                break;
-            case MinionToUpgrade.Wand:
-                //minions_SO[8].GetComponent<Wand>().wandData.PowerAmount++;
-                break;
-            default:
-                break;
-        }
     }
     void AssignRandomStat()
     {
@@ -153,8 +115,26 @@ public class LevelUpMenu : MonoBehaviour
         message = button.GetComponentInChildren <Text>().text;
         //1: Pause gameplay
         Time.timeScale = 0;
-
+        currentMinion.UpdateStat(statName);
         //apply the actual stat
+        //switch (currentStat)
+        //{
+        //    //todo do this with Json Data
+        //    case StatToUpgrade.MoveSpeed:
+        //        currentMinion.UpdateStat(statName);
+        //        break;
+        //    case StatToUpgrade.AttackPower:
+        //        currentMinion.AttackPower++;
+        //        break;
+        //    case StatToUpgrade.AttackDelay:
+        //        currentMinion.AttackDelay++;
+        //        break;
+        //    case StatToUpgrade.Health:
+        //        currentMinion.AttackDelay++;
+        //        break;
+        //    default:
+        //        break;
+        //}
 
         Debug.Log(message);
         DeActivateLevelUpMenu();
@@ -173,6 +153,4 @@ public class LevelUpMenu : MonoBehaviour
         this.gameObject.SetActive(false);
         Utilities.OnGamePause();
     }
-
-
 }

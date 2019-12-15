@@ -248,7 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -287,17 +287,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  minions_SO:
-  - {fileID: 1224970153713450337, guid: 2598815d3c0bc824a9da470df96ea7eb, type: 3}
-  - {fileID: 1224970153713450337, guid: 4a751e70c79aa804d8ec5f1790f7cfd0, type: 3}
-  - {fileID: 1224970153713450337, guid: c79d591ef0cf45540b258a4624bbeeac, type: 3}
-  - {fileID: 1224970153713450337, guid: 80380cfd7773e8c4299c5b031e52da8c, type: 3}
-  - {fileID: 1224970153713450337, guid: 8bc67755b43b53046be2b176b76e2b41, type: 3}
-  - {fileID: 1224970153713450337, guid: 3c8e7ff8ec0029a4abb7498a91bb4d3b, type: 3}
-  - {fileID: 1224970153713450337, guid: 51e8c49d12eb23c41be4a72715655bc7, type: 3}
-  - {fileID: 1224970153713450337, guid: ca789bbd72832624a94acdab5705232d, type: 3}
-  - {fileID: 3139347709638618978, guid: e901b0de18f52884a8ce1b8c6763befa, type: 3}
-  - {fileID: 6549312942367367551, guid: 37ef8f4f04555e1489b1ae4edb3d98ef, type: 3}
+  Upgradables:
+  - {fileID: 11400000, guid: 875a9830eb097584fbfac121257ab647, type: 2}
+  - {fileID: 11400000, guid: 3373decb333036d4e820385c21247707, type: 2}
+  - {fileID: 11400000, guid: bc051795d5e633a43a8cc7a58c4b8b13, type: 2}
+  - {fileID: 11400000, guid: 9a16512b1b85f314884978afba479359, type: 2}
+  - {fileID: 11400000, guid: d7ac7a4f9b40a6840b834526962a00a0, type: 2}
+  - {fileID: 11400000, guid: ee90bf36ea2e58a429ff6bf3f0fcd50c, type: 2}
+  - {fileID: 11400000, guid: 5a43138fb571e5241ba7e8afa1396a81, type: 2}
+  - {fileID: 11400000, guid: 470204d87962dd5458796bc6ae86c520, type: 2}
+  - {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}
 --- !u!1 &90775011
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,7 +2754,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -4.822201e+10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4231,27 +4230,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1109761774}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1112874717 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3139347709638618978, guid: e901b0de18f52884a8ce1b8c6763befa,
-    type: 3}
-  m_PrefabInstance: {fileID: 3139347709416413766}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1112874718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112874717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4867c9c945513f94f9e5dc36b7fd4746, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _levelupThreshold: 1
-  _creditBalance: 0
-  _experiance: 0
 --- !u!1001 &1178004018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6242,12 +6220,6 @@ PrefabInstance:
       propertyPath: image
       value: 
       objectReference: {fileID: 488366319}
-    - target: {fileID: 210872405396005713, guid: e901b0de18f52884a8ce1b8c6763befa,
-        type: 3}
-      propertyPath: Data
-      value: 
-      objectReference: {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46,
-        type: 2}
     - target: {fileID: 3139347709638618978, guid: e901b0de18f52884a8ce1b8c6763befa,
         type: 3}
       propertyPath: m_Name

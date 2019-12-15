@@ -29,7 +29,7 @@ public class Turtle : MonoBehaviour
         
     }
     private void Awake() {
-        speed = GetComponent<MinionData>().Data.Movespeed;
+        speed = GetComponent<MinionData>().Data.MoveSpeed;
         rb = GetComponent<Rigidbody>();
     }
 
