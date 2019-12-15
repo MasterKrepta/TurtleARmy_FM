@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -81,7 +82,7 @@ public class LevelUpMenu : MonoBehaviour
 
     void AssignRandomMinion()
     {
-        currentMinion = Upgradables[ Random.Range(0, Upgradables.Count)];
+        currentMinion = Upgradables[UnityEngine.Random.Range(0, Upgradables.Count)];
         minionName = currentMinion.name;
         AssignRandomStat();
 
@@ -90,14 +91,16 @@ public class LevelUpMenu : MonoBehaviour
     {
         currentStat = (StatToUpgrade)UnityEngine.Random.Range(0, sizeof(StatToUpgrade));
         statName = currentStat.ToString();
+       // Debug.Log($"{statName} is being sent to the button");
         switch (currentStat)
         {
-            //todo figure out level display to screen
+            //todo figure out level display
+            //TODO Reword this for the player not the developer
             case StatToUpgrade.MoveSpeed:
-                message = $"{minionName} gains an Increase in {statName}\n\n 0/0";
+                message = $"{minionName} gains increased {statName}\n\n 0/0";
                 break;
             case StatToUpgrade.AttackPower:
-                message = $"{minionName} now has more {statName}\n\n 0/0";
+                message = $"{minionName} now has increased {statName}\n\n 0/0";
                 break;
             case StatToUpgrade.AttackDelay:
                 message = $"{minionName} has a decreased {statName}\n\n 0/0";
@@ -112,33 +115,84 @@ public class LevelUpMenu : MonoBehaviour
 
     public void MakeSelection(Button button)
     {
-        message = button.GetComponentInChildren <Text>().text;
-        //1: Pause gameplay
-        Time.timeScale = 0;
-        currentMinion.UpdateStat(statName);
-        //apply the actual stat
-        //switch (currentStat)
-        //{
-        //    //todo do this with Json Data
-        //    case StatToUpgrade.MoveSpeed:
-        //        currentMinion.UpdateStat(statName);
-        //        break;
-        //    case StatToUpgrade.AttackPower:
-        //        currentMinion.AttackPower++;
-        //        break;
-        //    case StatToUpgrade.AttackDelay:
-        //        currentMinion.AttackDelay++;
-        //        break;
-        //    case StatToUpgrade.Health:
-        //        currentMinion.AttackDelay++;
-        //        break;
-        //    default:
-        //        break;
-        //}
+        message = button.GetComponentInChildren<Text>().text;
+        string actualStat = GetActualStat(message); //TODO fix this hack with something better
+        currentMinion = GetActualMinion(message); //todo fix this hack
 
+        Time.timeScale = 0;
+
+        currentMinion.UpdateStat(actualStat); 
+        //Debug.Log($"{currentMinion.oldValue} is old: { currentMinion.GetUpgradedValue(actualStat)} is the new value");
         Debug.Log(message);
+
         DeActivateLevelUpMenu();
         Time.timeScale = 1;
+    }
+
+    private Minion GetActualMinion(string message)
+    {
+        //TODO oh my god fix this, this method is going to be super error prone when i change the names of the SOs
+        if (message.Contains("1_MeleeTurtle"))
+        {
+
+            return Upgradables[0];
+        }
+        else if (message.Contains("2_RangeTurtle"))
+        {
+            return Upgradables[1];
+        }
+        else if (message.Contains("3_SleepyTom"))
+        {
+            return Upgradables[2];
+        }
+        else if (message.Contains("Turtle_4"))
+        {
+            return Upgradables[3];
+        }
+        else if (message.Contains("Turtle_5"))
+        {
+            return Upgradables[4];
+        }
+        else if (message.Contains("Turtle_6"))
+        {
+            return Upgradables[5];
+        }
+        else if (message.Contains("Turtle_7"))
+        {
+            return Upgradables[6];
+        }
+        else if (message.Contains("Turtle_8"))
+        {
+            return Upgradables[7];
+        }
+        else if (message.Contains("FloridaMan"))
+        {
+            return Upgradables[8];
+        }
+        return null;
+
+    }
+
+    private string GetActualStat(string message)
+    {
+        if (message.Contains("MoveSpeed"))
+        {
+            return "MoveSpeed";
+        }
+        else if (message.Contains("AttackPower"))
+        {
+            return "AttackPower";
+        }
+        else if (message.Contains("AttackDelay"))
+        {
+            return "AttackDelay";
+        }
+        else if (message.Contains("Health"))
+        {
+            return "Health";
+        }
+        return null;
+
     }
 
     public void ActivateLevelUpMenu()

@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b801be796ff694e96173105549046a, type: 3}
   m_Name: 1_MeleeTurtle
   m_EditorClassIdentifier: 
-  Movespeed: 35
+  MoveSpeed: 31
   CostToSpawn: 1
-  AttackPower: 2
+  AttackPower: 3
   AttackDelay: 1.5
   Health: 50
+  UpgradeLevel_Speed: 0
+  UpgradeLevel_AttackPower: 0
+  UpgradeLevel_AttackDelay: 0
+  UpgradeLevel_Health: 0

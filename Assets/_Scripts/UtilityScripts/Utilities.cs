@@ -11,5 +11,7 @@ public static class Utilities
     static void PauseToggle()
     {
         Paused = !Paused;
+
+        if (Paused) { Time.timeScale = 0;} else{ Time.timeScale = 1;}
     }
 }

@@ -21,6 +21,8 @@ public class Shoot : MonoBehaviour, IAction
     }
 
     public void PeformAction() {
+        if (Utilities.Paused) { return; }
+
         Instantiate(Bullet_PF, barrel.position, Quaternion.identity);
 
         //print($"Fire for GO: {this.name}");

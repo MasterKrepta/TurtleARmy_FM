@@ -12,6 +12,15 @@ public class Minion : ScriptableObject
     public float AttackDelay = 1f;
     public float Health = 10f;
 
+    #region Starting Values
+    public float Starting_MoveSpeed = 30f;
+    public float Starting_CostToSpawn = 1f;
+    public float Starting_AttackPower = 1f;
+    public float Starting_AttackDelay = 1f;
+    public float Starting_Health = 10f;
+    #endregion
+
+    [HideInInspector]public string oldValue = "";
     //TOdo still need to figure out how to remove these when we max level (properties im thinking)
     public int UpgradeLevel_Speed = 0;
     public int UpgradeLevel_AttackPower = 0;
@@ -20,7 +29,9 @@ public class Minion : ScriptableObject
 
     public void UpdateStat(string statToUpgrade)
     {
-        Debug.Log("updating stat");
+        Debug.Log($"{statToUpgrade} is whats being upgraded");
+        oldValue = GetOldValue(statToUpgrade);
+
         switch (statToUpgrade)
         {
             case "MoveSpeed":
@@ -33,8 +44,8 @@ public class Minion : ScriptableObject
                 break;
             case "AttackDelay":
                 //todo Limit to minimum
-                AttackDelay++;
-                UpgradeLevel_AttackDelay--;
+                AttackDelay -= 0.25f;
+                UpgradeLevel_AttackDelay++;
                 break;
             case "Health":
                 Health++;
@@ -43,6 +54,50 @@ public class Minion : ScriptableObject
 
             default:
                 break;
+        }
+    }
+    public string GetOldValue(string stat)
+    {
+        switch (stat)
+        {
+            case "MoveSpeed":
+                return MoveSpeed.ToString();
+
+            case "AttackPower":
+                return AttackPower.ToString();
+
+            case "AttackDelay":
+                return AttackDelay.ToString();
+
+            case "Health":
+                return Health.ToString();
+
+
+            default:
+                return null;
+
+        }
+    }
+    public string GetUpgradedValue(string stat)
+    {
+        switch (stat)
+        {
+            case "MoveSpeed":
+                return MoveSpeed.ToString();
+                
+            case "AttackPower":
+                return AttackPower.ToString();
+                
+            case "AttackDelay":
+                return AttackDelay.ToString();
+                
+            case "Health":
+                return Health.ToString();
+                
+
+            default:
+                return null;
+                
         }
     }
 }
