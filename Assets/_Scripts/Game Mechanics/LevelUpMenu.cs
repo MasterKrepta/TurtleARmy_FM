@@ -60,20 +60,20 @@ public class LevelUpMenu : MonoBehaviour
     void Start()
     {
         //TODO figure out how i want to remove upgrades that have become maxed out from the list of possible
-        //TODO , will probobly need refactored
+        //TODO will need refactored
         this.gameObject.SetActive(false);
     }
 
     private void BeginMenu()
     {
-         minionName = "";
-         statName = "";
-         message = "";
+        minionName = "";
+        statName = "";
+        message = "";
         Buttons = GetComponentsInChildren<Button>();
+        
         foreach (Button item in Buttons)
         {
             AssignRandomMinion();
-
             item.GetComponentInChildren<Text>().text = message;
         }
     }
@@ -151,23 +151,27 @@ public class LevelUpMenu : MonoBehaviour
     public void MakeSelection(Button button)
     {
         message = button.GetComponentInChildren <Text>().text;
-        //todo pause gameplay here
+        //1: Pause gameplay
+        Time.timeScale = 0;
+
         //apply the actual stat
-        
+
         Debug.Log(message);
         DeActivateLevelUpMenu();
-        //todo resume gameplay here
+        Time.timeScale = 1;
     }
 
     public void ActivateLevelUpMenu()
     {
         this.gameObject.SetActive(true);
+        Utilities.OnGamePause();
         BeginMenu();
     }
 
     public void DeActivateLevelUpMenu()
     {
         this.gameObject.SetActive(false);
+        Utilities.OnGamePause();
     }
 
 

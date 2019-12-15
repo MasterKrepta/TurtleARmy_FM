@@ -9,20 +9,29 @@ public class EnemyMove : MonoBehaviour
     Rigidbody rb;
     DetectTarget detectTarget;
 
-  
+
+    private void OnEnable()
+    {
+
+    }
+
     void Awake()
     {
         speed = GetComponent<MinionData>().Data.Movespeed;
         detectTarget = GetComponent<DetectTarget>();
         rb = GetComponent<Rigidbody>();
     }
-    
+
 
     void FixedUpdate()
     {
-        if (!detectTarget.TargetLock()) { // if not locked on move
+        if (Utilities.Paused) { return; }
+
+        if (!detectTarget.TargetLock())
+        { // if not locked on move
             rb.velocity = transform.forward * speed * Time.deltaTime;
         }
     }
-
 }
+
+   

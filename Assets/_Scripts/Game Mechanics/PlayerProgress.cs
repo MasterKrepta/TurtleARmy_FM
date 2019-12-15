@@ -71,13 +71,15 @@ public class PlayerProgress : MonoBehaviour
 
 	private void LevelUp()
 	{
-		LevelUpMenu.Instance.ActivateLevelUpMenu();
-		//throw new NotImplementedException();
-		//1: Pause gameplay
+		
+		
+		
 		//Adjust experiance to prevent rollover loss
 		//2: Show three options
+		LevelUpMenu.Instance.ActivateLevelUpMenu();
 		//3: upgrade option chosen
 		//4: resume gameplay
+		
 	}
 
 	private bool CanLevelUp()
