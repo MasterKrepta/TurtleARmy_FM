@@ -16,10 +16,8 @@ public class Wand : MonoBehaviour
     {
         if (Helpers.Paused) { return; }
 
-        if (Input.GetButtonDown("Jump") && CanCast(wandData.Cost) == true) {
-            nextCastTime = Time.time + wandData.CooldownTime;
-            Instantiate(wandData.WandPrefab, wandCastPoint.position, Quaternion.identity);
-            Resources.Instance.UsePower(wandData.Cost);
+        if (Input.GetButtonDown("Jump")){
+            FireButton();
         }
     }
 
@@ -28,5 +26,16 @@ public class Wand : MonoBehaviour
             return true;
         }
         else {return false; }
+    }
+    
+    public void FireButton()
+    {
+
+        if(CanCast(wandData.Cost) == true)
+        {
+            nextCastTime = Time.time + wandData.CooldownTime;
+            Instantiate(wandData.WandPrefab, wandCastPoint.position, Quaternion.identity);
+            Resources.Instance.UsePower(wandData.Cost);
+        }
     }
 }
