@@ -12,8 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b801be796ff694e96173105549046a, type: 3}
   m_Name: 3_SleepyTom
   m_EditorClassIdentifier: 
-  Movespeed: 20
-  CostToSpawn: 3
-  AttackPower: 0
-  AttackDelay: 0
-  Health: 50
+  MoveSpeed: 30
+  CostToSpawn: 1
+  AttackPower: 1
+  AttackDelay: 1
+  Health: 30
+  Starting_MoveSpeed: 30
+  Starting_CostToSpawn: 1
+  Starting_AttackPower: 1
+  Starting_AttackDelay: 1
+  Starting_Health: 30
+  oldValue: 
+  UpgradeLevel_Speed: 1
+  UpgradeLevel_AttackPower: 1
+  UpgradeLevel_AttackDelay: 0
+  UpgradeLevel_Health: 0

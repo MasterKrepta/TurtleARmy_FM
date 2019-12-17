@@ -15,12 +15,14 @@ public class CauseWandDamage : MonoBehaviour
         IHasHealth otherHealth = other.GetComponent<IHasHealth>();
         if (otherHealth != null && other.tag != gameObject.tag) {
             otherHealth.TakeDamage(dmgAmount);
+
+            //TODo use this if we dont have durability Destroy(gameObject);
+
             durability--;
-            if (durability <=0) {
+            if (durability <= 0)
+            {
                 Destroy(gameObject);
             }
-            
         }
-
     }
 }

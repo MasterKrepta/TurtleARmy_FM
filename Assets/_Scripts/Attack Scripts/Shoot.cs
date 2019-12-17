@@ -21,7 +21,8 @@ public class Shoot : MonoBehaviour, IAction
     }
 
     public void PeformAction() {
-        if (Utilities.Paused) { return; }
+        
+        if (Helpers.Paused) { return; }
 
         Instantiate(Bullet_PF, barrel.position, Quaternion.identity);
 

@@ -14,7 +14,7 @@ public class Wand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Utilities.Paused) { return; }
+        if (Helpers.Paused) { return; }
 
         if (Input.GetButtonDown("Jump") && CanCast(wandData.Cost) == true) {
             nextCastTime = Time.time + wandData.CooldownTime;

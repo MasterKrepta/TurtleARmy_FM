@@ -37,6 +37,7 @@ public class DetectTarget : MonoBehaviour
 
     void FixedUpdate()
     {
+        
 
         RaycastHit hit;
 

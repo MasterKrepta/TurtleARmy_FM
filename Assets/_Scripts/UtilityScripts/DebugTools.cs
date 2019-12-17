@@ -7,7 +7,7 @@ public class DebugTools : MonoBehaviour
     [SerializeField] List<Minion> AllMinions = new List<Minion>();
     void Awake()
     {
-        ResetAllMinions();
+        ResetAllMinions(); //TODo remove this for release
     }
 
     void ResetAllMinions()
@@ -19,7 +19,7 @@ public class DebugTools : MonoBehaviour
             item.AttackPower = item.Starting_AttackPower;
             item.AttackDelay = item.Starting_AttackDelay;
             item.Health = item.Starting_Health;
-            item.oldValue = "";
+            
             
         }
     }

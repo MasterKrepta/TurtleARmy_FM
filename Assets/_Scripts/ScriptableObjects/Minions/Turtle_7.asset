@@ -12,8 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b801be796ff694e96173105549046a, type: 3}
   m_Name: Turtle_7
   m_EditorClassIdentifier: 
-  Movespeed: 30
+  MoveSpeed: 30
   CostToSpawn: 1
   AttackPower: 1
   AttackDelay: 1
   Health: 70
+  Starting_MoveSpeed: 30
+  Starting_CostToSpawn: 1
+  Starting_AttackPower: 1
+  Starting_AttackDelay: 1
+  Starting_Health: 70
+  oldValue: 
+  UpgradeLevel_Speed: 2
+  UpgradeLevel_AttackPower: 1
+  UpgradeLevel_AttackDelay: 0
+  UpgradeLevel_Health: 1

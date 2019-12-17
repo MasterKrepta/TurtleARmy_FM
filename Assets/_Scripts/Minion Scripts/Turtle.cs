@@ -35,7 +35,7 @@ public class Turtle : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        if (Utilities.Paused) { return; }
+        if (Helpers.Paused) { return; }
 
         if (!detectTarget.TargetLock()) { // if not locked on move
             rb.velocity = transform.forward * speed * Time.deltaTime;

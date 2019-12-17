@@ -25,7 +25,7 @@ public class EnemyMove : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Utilities.Paused) { return; }
+        if (Helpers.Paused) { return; }
 
         if (!detectTarget.TargetLock())
         { // if not locked on move

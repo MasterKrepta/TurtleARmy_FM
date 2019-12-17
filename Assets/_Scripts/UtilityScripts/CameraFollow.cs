@@ -15,6 +15,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Helpers.GameOver) { return; }
         transform.position = Player.position + offset;
     }
 }

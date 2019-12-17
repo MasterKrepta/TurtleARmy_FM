@@ -20,8 +20,8 @@ public class Minion : ScriptableObject
     public float Starting_Health = 10f;
     #endregion
 
-    [HideInInspector]public string oldValue = "";
     //TOdo still need to figure out how to remove these when we max level (properties im thinking)
+    //TODO might refactor to use a collection of scriptable objects
     public int UpgradeLevel_Speed = 0;
     public int UpgradeLevel_AttackPower = 0;
     public int UpgradeLevel_AttackDelay = 0;
@@ -30,7 +30,7 @@ public class Minion : ScriptableObject
     public void UpdateStat(string statToUpgrade)
     {
         Debug.Log($"{statToUpgrade} is whats being upgraded");
-        oldValue = GetOldValue(statToUpgrade);
+        
 
         switch (statToUpgrade)
         {
@@ -56,28 +56,7 @@ public class Minion : ScriptableObject
                 break;
         }
     }
-    public string GetOldValue(string stat)
-    {
-        switch (stat)
-        {
-            case "MoveSpeed":
-                return MoveSpeed.ToString();
-
-            case "AttackPower":
-                return AttackPower.ToString();
-
-            case "AttackDelay":
-                return AttackDelay.ToString();
-
-            case "Health":
-                return Health.ToString();
-
-
-            default:
-                return null;
-
-        }
-    }
+    
     public string GetUpgradedValue(string stat)
     {
         switch (stat)

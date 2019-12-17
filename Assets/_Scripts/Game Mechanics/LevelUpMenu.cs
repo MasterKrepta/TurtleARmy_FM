@@ -198,13 +198,13 @@ public class LevelUpMenu : MonoBehaviour
     public void ActivateLevelUpMenu()
     {
         this.gameObject.SetActive(true);
-        Utilities.OnGamePause();
+        Helpers.OnGamePause();
         BeginMenu();
     }
 
     public void DeActivateLevelUpMenu()
     {
         this.gameObject.SetActive(false);
-        Utilities.OnGamePause();
+        Helpers.OnGamePause();
     }
 }

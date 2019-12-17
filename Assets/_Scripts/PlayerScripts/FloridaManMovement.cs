@@ -26,7 +26,7 @@ public class FloridaManMovement : MonoBehaviour
 
     private void FixedUpdate() 
     {
-        if (Utilities.Paused) { return; }
+        if (Helpers.Paused) { return; }
 
         rb.velocity = new Vector3(0, rb.velocity.y, dirX * moveSpeed);
         

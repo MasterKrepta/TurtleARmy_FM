@@ -20,6 +20,7 @@ public class PlayerHealth : MonoBehaviour, IHasHealth
         CurrentHealth -= dmgAmount;
         UpdateHealthUI();
         if (CurrentHealth <= 0) {
+            Helpers.OnPlayerDeath();
             Destroy(gameObject);
         }
     }
