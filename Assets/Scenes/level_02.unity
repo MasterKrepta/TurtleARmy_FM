@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -284,19 +284,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Buttons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Upgradables:
-  - {fileID: 11400000, guid: 875a9830eb097584fbfac121257ab647, type: 2}
-  - {fileID: 11400000, guid: 3373decb333036d4e820385c21247707, type: 2}
-  - {fileID: 11400000, guid: bc051795d5e633a43a8cc7a58c4b8b13, type: 2}
-  - {fileID: 11400000, guid: 9a16512b1b85f314884978afba479359, type: 2}
-  - {fileID: 11400000, guid: d7ac7a4f9b40a6840b834526962a00a0, type: 2}
-  - {fileID: 11400000, guid: ee90bf36ea2e58a429ff6bf3f0fcd50c, type: 2}
-  - {fileID: 11400000, guid: 5a43138fb571e5241ba7e8afa1396a81, type: 2}
-  - {fileID: 11400000, guid: 470204d87962dd5458796bc6ae86c520, type: 2}
-  - {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}
+  - {fileID: 2002910247}
+  - {fileID: 1855158653}
+  - {fileID: 90775013}
+  Cards: []
 --- !u!1 &90775011
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +300,7 @@ GameObject:
   - component: {fileID: 90775015}
   - component: {fileID: 90775014}
   - component: {fileID: 90775013}
+  - component: {fileID: 90775016}
   m_Layer: 5
   m_Name: Option 3
   m_TagString: Untagged
@@ -427,6 +419,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90775011}
   m_CullTransparentMesh: 0
+--- !u!114 &90775016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90775011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf95ec60739f2140a2d8d90c3bc4e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardData: {fileID: 11400000, guid: 24a44feffcb5f974a81bbf7c93e78d23, type: 2}
+  buttonImg: {fileID: 0}
+  buttonText: {fileID: 0}
 --- !u!1 &93684870
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +502,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Florda Man gains an increase in speed
+  m_Text: '
 
 
     0/5'
@@ -2187,17 +2194,17 @@ PrefabInstance:
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.5
+      value: -10.3
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.9
+      value: -11.96
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
@@ -2262,37 +2269,37 @@ PrefabInstance:
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.2
+      value: 12.42
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.3
+      value: -13.22
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.4
+      value: -17.64
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.10943486
+      value: -0.11445383
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9493781
+      value: 0.9929192
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.033718858
+      value: -0.0036426636
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.29252067
+      value: -0.03160102
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
@@ -2302,17 +2309,17 @@ PrefabInstance:
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -7.3570004
+      value: 0.82900006
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 146.455
+      value: 183.54999
       objectReference: {fileID: 0}
     - target: {fileID: 7695386989404615173, guid: 50e5fb9eb8a700b45894e17c4707390c,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -10.931001
+      value: -13.125001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50e5fb9eb8a700b45894e17c4707390c, type: 3}
@@ -3401,7 +3408,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Florida Man''s Wand is now stronger
+  m_Text: '
 
 
     0/5'
@@ -4932,6 +4939,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a43138fb571e5241ba7e8afa1396a81, type: 2}
   - {fileID: 11400000, guid: 470204d87962dd5458796bc6ae86c520, type: 2}
   - {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}
+  AllCards:
+  - {fileID: 11400000, guid: b94f1f0bfe64e9249a323ae14704ddd3, type: 2}
+  - {fileID: 11400000, guid: ee20d419d204add41b40c526112d2a77, type: 2}
+  - {fileID: 11400000, guid: 24a44feffcb5f974a81bbf7c93e78d23, type: 2}
 --- !u!4 &1671638081
 Transform:
   m_ObjectHideFlags: 0
@@ -5114,7 +5125,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Minion Name Gains more health
+  m_Text: '
 
 
     0/5'
@@ -5517,6 +5528,7 @@ GameObject:
   - component: {fileID: 1855158655}
   - component: {fileID: 1855158654}
   - component: {fileID: 1855158653}
+  - component: {fileID: 1855158656}
   m_Layer: 5
   m_Name: Option 2
   m_TagString: Untagged
@@ -5635,6 +5647,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1855158651}
   m_CullTransparentMesh: 0
+--- !u!114 &1855158656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855158651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf95ec60739f2140a2d8d90c3bc4e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardData: {fileID: 11400000, guid: ee20d419d204add41b40c526112d2a77, type: 2}
+  buttonImg: {fileID: 0}
+  buttonText: {fileID: 0}
 --- !u!1 &1863011968
 GameObject:
   m_ObjectHideFlags: 0
@@ -6304,6 +6331,7 @@ GameObject:
   - component: {fileID: 2002910249}
   - component: {fileID: 2002910248}
   - component: {fileID: 2002910247}
+  - component: {fileID: 2002910250}
   m_Layer: 5
   m_Name: Option 1
   m_TagString: Untagged
@@ -6422,6 +6450,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002910245}
   m_CullTransparentMesh: 0
+--- !u!114 &2002910250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2002910245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf95ec60739f2140a2d8d90c3bc4e2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardData: {fileID: 11400000, guid: b94f1f0bfe64e9249a323ae14704ddd3, type: 2}
+  buttonImg: {fileID: 0}
+  buttonText: {fileID: 0}
 --- !u!1001 &2062697910
 PrefabInstance:
   m_ObjectHideFlags: 0

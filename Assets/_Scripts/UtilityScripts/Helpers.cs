@@ -9,6 +9,8 @@ public static class Helpers
     public static bool GameOver = false;
     public static Action OnGamePause =() => { PauseToggle(); };
     public static Action OnPlayerDeath = () => { CallGameOver(); };
+    public static Action OnLevelUp = () => { LevelUpCalled(); };
+    public static UpgradeCard CurrentCard;
 
 
     static void PauseToggle()
@@ -22,5 +24,9 @@ public static class Helpers
     static void CallGameOver()
     {
         GameOver = true;
+    }
+    static void LevelUpCalled()
+    {
+
     }
 }

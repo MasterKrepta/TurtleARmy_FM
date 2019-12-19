@@ -59,20 +59,32 @@ public class PlayerProgress : MonoBehaviour
 			//TODO notify game (event)
 		}
 	}
+
+	private void OnEnable()
+	{
+		Helpers.OnLevelUp += LevelUp;
+	}
+	private void OnDisable()
+	{
+		Helpers.OnLevelUp -= LevelUp;
+	}
+
+
 	public void EarnXP(int xpToGain)
 	{
 		Experiance += xpToGain;
 		if (CanLevelUp())
 		{
 			LevelUp();
-			//TODO call the event to do this. 
 		}
 	}
 
 	private void LevelUp()
 	{
+		
 		//Adjust experiance to prevent rollover loss
 		LevelUpMenu.Instance.ActivateLevelUpMenu();
+		
 
 	}
 

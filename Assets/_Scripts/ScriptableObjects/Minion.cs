@@ -9,7 +9,7 @@ public class Minion : ScriptableObject
     public float MoveSpeed = 30f;
     public float CostToSpawn = 1f;
     public float AttackPower = 1f;
-    public float AttackDelay = 1f;
+    public float AttackDelay = 1.25f; //todo might need to rething this
     public float Health = 10f;
 
     #region Starting Values
@@ -20,63 +20,83 @@ public class Minion : ScriptableObject
     public float Starting_Health = 10f;
     #endregion
 
-    //TOdo still need to figure out how to remove these when we max level (properties im thinking)
-    //TODO might refactor to use a collection of scriptable objects
-    public int UpgradeLevel_Speed = 0;
-    public int UpgradeLevel_AttackPower = 0;
-    public int UpgradeLevel_AttackDelay = 0;
-    public int UpgradeLevel_Health = 0;
 
-    public void UpdateStat(string statToUpgrade)
+    [SerializeField] private int _upgradeSpeed;
+
+    
+    public int UpgradeSpeed
     {
-        Debug.Log($"{statToUpgrade} is whats being upgraded");
-        
-
-        switch (statToUpgrade)
-        {
-            case "MoveSpeed":
-                MoveSpeed++;
-                UpgradeLevel_Speed++;
-                break;
-            case "AttackPower":
-                AttackPower++;
-                UpgradeLevel_AttackPower++;
-                break;
-            case "AttackDelay":
-                //todo Limit to minimum
-                AttackDelay -= 0.25f;
-                UpgradeLevel_AttackDelay++;
-                break;
-            case "Health":
-                Health++;
-                UpgradeLevel_Health++;
-                break;
-
-            default:
-                break;
+        get { return _upgradeSpeed; }
+        set { 
+            _upgradeSpeed = value;
+            if (_upgradeSpeed >0)
+            {
+                //Debug.Log($"Time to remove {this.name} card for speed");
+                //TODO figure out removing card
+                RemoveCard();
+            }
         }
     }
-    
-    public string GetUpgradedValue(string stat)
-    {
-        switch (stat)
-        {
-            case "MoveSpeed":
-                return MoveSpeed.ToString();
-                
-            case "AttackPower":
-                return AttackPower.ToString();
-                
-            case "AttackDelay":
-                return AttackDelay.ToString();
-                
-            case "Health":
-                return Health.ToString();
-                
 
-            default:
-                return null;
-                
+    [SerializeField] private int _upgradeAttackPower;
+
+    
+    public int UpgradeAttackPower
+    {
+        get { return _upgradeAttackPower; }
+        set 
+        {
+            _upgradeAttackPower = value;
+            if (UpgradeAttackPower > 0)
+            {
+                //Debug.Log($"Time to remove {this.name} card for power");
+                //TODO figure out removing card
+                RemoveCard();
+            }
         }
+    }
+
+    [SerializeField] private int _upgradeAttackDelay;
+
+    
+    public int UpgradeAttackDelay
+    {
+        get { return _upgradeAttackDelay; }
+        set
+        { 
+
+            _upgradeAttackDelay = value;
+            
+            if (UpgradeAttackDelay > 0)
+            {
+               // Debug.Log($"Time to remove {this.name} card for delay");
+                //TODO figure out removing card
+                RemoveCard();
+
+                
+            }
+        }
+    }
+
+    [SerializeField] private int _upgradeHealth;
+
+    public int UpgradeHealth
+    {
+        get { return _upgradeHealth; }
+        set 
+        { 
+            _upgradeHealth = value;
+            if (UpgradeHealth > 0)
+            {
+               // Debug.Log($"Time to remove {this.name} card for health");
+                //TODO figure out removing card
+                RemoveCard();
+            }
+        }
+    }
+
+    void RemoveCard()
+    {
+        LevelUpMenu.Instance.RemoveCard(Helpers.CurrentCard);
     }
 }

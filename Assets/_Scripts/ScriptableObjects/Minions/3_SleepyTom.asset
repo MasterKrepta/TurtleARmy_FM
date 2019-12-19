@@ -22,8 +22,7 @@ MonoBehaviour:
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 30
-  oldValue: 
-  UpgradeLevel_Speed: 1
-  UpgradeLevel_AttackPower: 1
+  UpgradeLevel_Speed: 0
+  UpgradeLevel_AttackPower: 0
   UpgradeLevel_AttackDelay: 0
   UpgradeLevel_Health: 0
