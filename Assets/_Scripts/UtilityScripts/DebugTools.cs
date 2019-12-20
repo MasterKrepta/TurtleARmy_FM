@@ -5,16 +5,15 @@ using UnityEngine;
 public class DebugTools : MonoBehaviour
 {
     [SerializeField] List<Minion> AllMinions = new List<Minion>();
-    
+    [SerializeField] UpgradeCard[] Card_ScriptableObjs;
+
     private static DebugTools _instance;
     public static DebugTools Instance
     {
         get
         {
-
             return _instance;
         }
-
     }
 
     public DebugTools()
@@ -24,9 +23,20 @@ public class DebugTools : MonoBehaviour
 
     void Awake()
     {
-        //ResetAllMinions(); //TODo remove this for release
+        Card_ScriptableObjs = (UpgradeCard[])Resources.FindObjectsOfTypeAll(typeof(UpgradeCard));
+        ResetAllMinions(); //TODo remove this for release
         //ResetAllCards();
         //DontDestroyOnLoad(Instance);
+    }
+
+    private void OnEnable()
+    {
+        Helpers.OnResetCards += ResetAllCards;
+    }
+
+    private void OnDisable()
+    {
+        Helpers.OnResetCards -= ResetAllCards;
     }
 
     void ResetAllMinions()
@@ -44,16 +54,16 @@ public class DebugTools : MonoBehaviour
             item.UpgradeAttackPower = 0;
             item.UpgradeHealth = 0;
             item.UpgradeSpeed = 0;
-            
         }
-        
     }
 
-    void ResetAllCards()
+    public void ResetAllCards()
     {
-        foreach (var item in LevelUpMenu.Instance.Cards)
+        print("Cards Reset");
+        foreach (var item in Card_ScriptableObjs)
         {
-            item.MaxLevel = false;
+            item.IsMaxLevel = false;
+            
         }
         
     }

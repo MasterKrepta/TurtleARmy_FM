@@ -7,7 +7,7 @@ public class Army : MonoBehaviour
 {
 
     [SerializeField] GameObject[] Turtles;
-    [SerializeField]Transform spawner;
+    [SerializeField]Transform spawner = null;
     public Action<int> Spawn;
     public Collider[] colliders;
     public float radius;

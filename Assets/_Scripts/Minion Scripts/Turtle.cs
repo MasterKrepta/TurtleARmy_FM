@@ -8,11 +8,6 @@ public class Turtle : MonoBehaviour
     Rigidbody rb;
     float speed;
 
-    
-
-
-
-  
     public enum turtleState
     {
         MOVING, ATTACKING, DEAD

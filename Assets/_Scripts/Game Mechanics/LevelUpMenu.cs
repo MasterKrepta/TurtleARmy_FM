@@ -22,12 +22,12 @@ public class LevelUpMenu : MonoBehaviour
         
     }
     [SerializeField] Button[] Buttons = new Button[3];
-
+    public List<UpgradeCard> Cards = new List<UpgradeCard>();
 
     private void OnEnable()
     {
         SceneManager.sceneLoaded += ConfigureCards;
-        DontDestroyOnLoad(Instance);
+        //DontDestroyOnLoad(Instance);
     }
     private void OnDisable()
     {
@@ -36,15 +36,16 @@ public class LevelUpMenu : MonoBehaviour
 
     private void InitCards()
     {
-        
+        Debug.Log("init cards");
         var temp = transform.GetChild(0).GetComponentsInChildren<Card>();
+        
         foreach (var item in temp)
         {
             item.Init(Cards[ UnityEngine.Random.Range(0, Cards.Count)]);
         }
     }
     
-    public List<UpgradeCard> Cards = new List<UpgradeCard>();
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -62,9 +63,9 @@ public class LevelUpMenu : MonoBehaviour
         foreach (var item in allCards)
         {
             
-            if (!item.MaxLevel)
+            if (!item.IsMaxLevel)
             {
-                print("Add");
+                //print("Add");
                 Cards.Add(item);
             }
             else
@@ -88,6 +89,7 @@ public class LevelUpMenu : MonoBehaviour
 
     public void ActivateLevelUpMenu()
     {
+        Debug.Log("activate levelup menu");
         InitCards();
         this.gameObject.SetActive(true);
         Helpers.OnGamePause();
@@ -106,9 +108,11 @@ public class LevelUpMenu : MonoBehaviour
 
     public void RemoveCard(UpgradeCard cardToRemove)
     {
-        if (Cards.Contains(cardToRemove)) // This should always be true
+        Helpers.CurrentCard = cardToRemove;
+        Helpers.CurrentCard.IsMaxLevel = true; // makesure we dont miss this
+        if (Cards.Contains(Helpers.CurrentCard)) // This should always be true
         { 
-            Cards.Remove(cardToRemove);
+            Cards.Remove(Helpers.CurrentCard);
         }
     }
 }

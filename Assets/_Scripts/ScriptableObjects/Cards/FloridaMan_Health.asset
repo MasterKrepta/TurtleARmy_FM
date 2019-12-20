@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91dfea3c4e2f22c41bf3fafce65e6349, type: 3}
   m_Name: FloridaMan_Health
   m_EditorClassIdentifier: 
-  MaxLevel: 0
+  IsMaxLevel: 0
+  maxLevel: 0
   Icon: {fileID: 21300000, guid: c684bf3ed5e8e18459d34ccec78a1868, type: 3}
   minionName: FloridaMan
   Stat: 1
-  Text: "FloridaMan gains an increase in power \n 10/5"
+  Text: "FloridaMan gains an increase in power \n 0/5"
   minionToUpgrade: {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}

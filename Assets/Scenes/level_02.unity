@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4916,7 +4916,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1671638080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4939,10 +4939,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5a43138fb571e5241ba7e8afa1396a81, type: 2}
   - {fileID: 11400000, guid: 470204d87962dd5458796bc6ae86c520, type: 2}
   - {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}
-  AllCards:
-  - {fileID: 11400000, guid: b94f1f0bfe64e9249a323ae14704ddd3, type: 2}
-  - {fileID: 11400000, guid: ee20d419d204add41b40c526112d2a77, type: 2}
-  - {fileID: 11400000, guid: 24a44feffcb5f974a81bbf7c93e78d23, type: 2}
 --- !u!4 &1671638081
 Transform:
   m_ObjectHideFlags: 0

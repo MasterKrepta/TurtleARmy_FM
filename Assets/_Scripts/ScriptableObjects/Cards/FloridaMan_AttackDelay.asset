@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91dfea3c4e2f22c41bf3fafce65e6349, type: 3}
   m_Name: FloridaMan_AttackDelay
   m_EditorClassIdentifier: 
-  MaxLevel: 0
+  IsMaxLevel: 0
+  maxLevel: 0
   Icon: {fileID: 21300000, guid: cb5b99401e97f904da00133546f4d869, type: 3}
   minionName: FloridaMan
   Stat: 2
-  Text: "FloridaMan attacks faster \n 3/5"
+  Text: "FloridaMan attacks faster \n 0/5"
   minionToUpgrade: {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}

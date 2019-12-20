@@ -10,6 +10,7 @@ public static class Helpers
     public static Action OnGamePause =() => { PauseToggle(); };
     public static Action OnPlayerDeath = () => { CallGameOver(); };
     public static Action OnLevelUp = () => { LevelUpCalled(); };
+    public static Action OnResetCards = () => { };
     public static UpgradeCard CurrentCard;
 
 
