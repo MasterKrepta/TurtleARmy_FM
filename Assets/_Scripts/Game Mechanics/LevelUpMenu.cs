@@ -38,7 +38,12 @@ public class LevelUpMenu : MonoBehaviour
     {
         Debug.Log("init cards");
         var temp = transform.GetChild(0).GetComponentsInChildren<Card>();
-        
+
+        if (Cards.Count == 0) //TODO test this, might not want to keep this 
+        {
+            //TODO call end of upgrade system
+        }
+
         foreach (var item in temp)
         {
             item.Init(Cards[ UnityEngine.Random.Range(0, Cards.Count)]);
