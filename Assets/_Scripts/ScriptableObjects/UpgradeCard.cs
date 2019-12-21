@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UpgradeCard : ScriptableObject
 {
     public bool IsMaxLevel = false; //todo  This is to prevent the cards from loading on level load
-    [SerializeField] int maxLevel = 1;
+    [SerializeField] int maxLevel = 2;
     enum StatToUpgrade
     {
         MoveSpeed,
@@ -22,19 +22,20 @@ public class UpgradeCard : ScriptableObject
     [SerializeField] StatToUpgrade Stat;
     public string Text;
 
-    [SerializeField] Minion minionToUpgrade;
+    public Minion minionToUpgrade;
+    
 
-    public void AssignRandomStat()
+    public void ConfigureCardText()
     {
-        Debug.Log("Assign Random Stat");
+        Debug.Log("ConfigureCard");
         Text = "";
-        Stat = (StatToUpgrade)UnityEngine.Random.Range(0, sizeof(StatToUpgrade));
+        //Stat = (StatToUpgrade)UnityEngine.Random.Range(0, sizeof(StatToUpgrade));
         minionName = minionToUpgrade.name;
-
+        //tODO Look at this code closely, I may be calling remove card too frequently
         switch (Stat)
         {
             case StatToUpgrade.MoveSpeed:
-                Text = $"{minionName} gains a speed boost \n {minionToUpgrade.UpgradeSpeed}/5";
+                Text = $"{minionName} gains a speed boost \n {minionToUpgrade.UpgradeSpeed}/{maxLevel}";
                 if (minionToUpgrade.UpgradeSpeed > maxLevel) 
                 {
                     IsMaxLevel = true;
@@ -42,7 +43,7 @@ public class UpgradeCard : ScriptableObject
                 }
                 break;
             case StatToUpgrade.AttackPower:
-                Text = $"{minionName} gains an increase in power \n {minionToUpgrade.UpgradeAttackPower}/5";
+                Text = $"{minionName} gains an increase in power \n {minionToUpgrade.UpgradeAttackPower}/{maxLevel}";
                 if (minionToUpgrade.UpgradeAttackPower > maxLevel)
                 {
                     IsMaxLevel = true;
@@ -50,7 +51,7 @@ public class UpgradeCard : ScriptableObject
                 }
                 break;
             case StatToUpgrade.AttackDelay:
-                Text = $"{minionName} attacks faster \n {minionToUpgrade.UpgradeAttackDelay}/5";
+                Text = $"{minionName} attacks faster \n {minionToUpgrade.UpgradeAttackDelay}/{maxLevel}";
                 if (minionToUpgrade.UpgradeAttackDelay > maxLevel)
                 {
                     IsMaxLevel = true;
@@ -58,7 +59,7 @@ public class UpgradeCard : ScriptableObject
                 }
                 break;
             case StatToUpgrade.Health:
-                Text = $"{minionName} can take more damage \n {minionToUpgrade.UpgradeHealth}/5";
+                Text = $"{minionName} can take more damage \n {minionToUpgrade.UpgradeHealth}/{maxLevel}";
                 if (minionToUpgrade.UpgradeHealth > maxLevel)
                 {
                    IsMaxLevel = true;

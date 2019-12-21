@@ -123,3 +123,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dmgAmount: 4
   durability: 3
+  FlordaMan_Data: {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}

@@ -36,7 +36,7 @@ public class LevelUpMenu : MonoBehaviour
 
     private void InitCards()
     {
-        Debug.Log("init cards");
+        
         var temp = transform.GetChild(0).GetComponentsInChildren<Card>();
 
         if (Cards.Count == 0) //TODO test this, might not want to keep this 
@@ -62,8 +62,7 @@ public class LevelUpMenu : MonoBehaviour
 
     private void ConfigureCards(Scene scene, LoadSceneMode mode)
     {
-        print("configuring cards");
-        UpgradeCard[] allCards = (UpgradeCard[])Resources.FindObjectsOfTypeAll(typeof(UpgradeCard));
+        UpgradeCard[] allCards = (UpgradeCard[])FindObjectsOfTypeAll(typeof(UpgradeCard));
         
         foreach (var item in allCards)
         {
@@ -75,7 +74,6 @@ public class LevelUpMenu : MonoBehaviour
             }
             else
             {
-                print($"remove {item.name}");
                 LevelUpMenu.Instance.RemoveCard(item); //todo might not need this
             }
         }
@@ -94,7 +92,6 @@ public class LevelUpMenu : MonoBehaviour
 
     public void ActivateLevelUpMenu()
     {
-        Debug.Log("activate levelup menu");
         InitCards();
         this.gameObject.SetActive(true);
         Helpers.OnGamePause();
@@ -114,10 +111,11 @@ public class LevelUpMenu : MonoBehaviour
     public void RemoveCard(UpgradeCard cardToRemove)
     {
         Helpers.CurrentCard = cardToRemove;
-        Helpers.CurrentCard.IsMaxLevel = true; // makesure we dont miss this
+        //Helpers.CurrentCard.IsMaxLevel = true; // makesure we dont miss this
         if (Cards.Contains(Helpers.CurrentCard)) // This should always be true
         { 
             Cards.Remove(Helpers.CurrentCard);
+            print($"{cardToRemove} removed ");
         }
     }
 }

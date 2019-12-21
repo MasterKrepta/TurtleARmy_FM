@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Minion : ScriptableObject
 {
+    [SerializeField] int maxLevel = 2;
     public float MoveSpeed = 30f;
     public float CostToSpawn = 1f;
     public float AttackPower = 1f;
@@ -20,7 +21,7 @@ public class Minion : ScriptableObject
     public float Starting_Health = 10f;
     #endregion
 
-
+    //TODO Remove the number system from the naming for release
     [SerializeField] private int _upgradeSpeed;
 
     
@@ -29,10 +30,9 @@ public class Minion : ScriptableObject
         get { return _upgradeSpeed; }
         set { 
             _upgradeSpeed = value;
-            if (_upgradeSpeed >0)
+            if (_upgradeSpeed >= maxLevel)
             {
                 //Debug.Log($"Time to remove {this.name} card for speed");
-                //TODO figure out removing card
                 RemoveCard();
             }
         }
@@ -47,10 +47,9 @@ public class Minion : ScriptableObject
         set 
         {
             _upgradeAttackPower = value;
-            if (UpgradeAttackPower > 0)
+            if (UpgradeAttackPower >= maxLevel)
             {
                 //Debug.Log($"Time to remove {this.name} card for power");
-                //TODO figure out removing card
                 RemoveCard();
             }
         }
@@ -67,13 +66,10 @@ public class Minion : ScriptableObject
 
             _upgradeAttackDelay = value;
             
-            if (UpgradeAttackDelay > 0)
+            if (UpgradeAttackDelay >= maxLevel)
             {
                // Debug.Log($"Time to remove {this.name} card for delay");
-                //TODO figure out removing card
                 RemoveCard();
-
-                
             }
         }
     }
@@ -86,10 +82,9 @@ public class Minion : ScriptableObject
         set 
         { 
             _upgradeHealth = value;
-            if (UpgradeHealth > 0)
+            if (UpgradeHealth >= maxLevel)
             {
                // Debug.Log($"Time to remove {this.name} card for health");
-                //TODO figure out removing card
                 RemoveCard();
             }
         }

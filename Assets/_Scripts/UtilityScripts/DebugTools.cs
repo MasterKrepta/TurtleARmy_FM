@@ -23,7 +23,7 @@ public class DebugTools : MonoBehaviour
 
     void Awake()
     {
-        Card_ScriptableObjs = (UpgradeCard[])Resources.FindObjectsOfTypeAll(typeof(UpgradeCard));
+        Card_ScriptableObjs = (UpgradeCard[])FindObjectsOfTypeAll(typeof(UpgradeCard));
         ResetAllMinions(); //TODo remove this for release
         //ResetAllCards();
         //DontDestroyOnLoad(Instance);
@@ -44,6 +44,7 @@ public class DebugTools : MonoBehaviour
         print("Reset minions");
         foreach (var item in AllMinions)
         {
+            
             item.MoveSpeed = item.Starting_MoveSpeed;
             item.CostToSpawn = item.Starting_CostToSpawn;
             item.AttackPower = item.Starting_AttackPower;
@@ -59,11 +60,13 @@ public class DebugTools : MonoBehaviour
 
     public void ResetAllCards()
     {
+        //todo This seems buggy   
         print("Cards Reset");
+
+        ResetAllMinions();
         foreach (var item in Card_ScriptableObjs)
         {
             item.IsMaxLevel = false;
-            
         }
         
     }

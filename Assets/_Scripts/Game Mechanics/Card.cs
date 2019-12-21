@@ -23,7 +23,7 @@ public class Card : MonoBehaviour
         }
         buttonImg.sprite = _cardData.Icon;
         cardData = _cardData;
-        //cardData.AssignRandomStat();
+        cardData.ConfigureCardText(); //todo this may be doing too much
         buttonText.text = cardData.Text;
     }
     public void Use(UpgradeCard selectedCard)

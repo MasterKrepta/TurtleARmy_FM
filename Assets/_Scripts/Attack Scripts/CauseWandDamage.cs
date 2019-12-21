@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class CauseWandDamage : MonoBehaviour
 {
-    [SerializeField] int dmgAmount = 1;
+    [SerializeField] float dmgAmount = 1;
     [SerializeField] int durability = 3;
+    [SerializeField] Minion FlordaMan_Data;
 
     private void Awake() {
         //todo Need to set this up using the data from the player automatically. 
+        
         Destroy(gameObject, 1.5f);
+    }
+    private void Update()
+    {
+        //TODo this is horrible, Get it out of updagte lets test it (seems to not be working
+        dmgAmount = FlordaMan_Data.AttackPower;
     }
     private void OnTriggerEnter(Collider other) {
         IHasHealth otherHealth = other.GetComponent<IHasHealth>();
@@ -17,6 +24,7 @@ public class CauseWandDamage : MonoBehaviour
             otherHealth.TakeDamage(dmgAmount);
 
             //TODo use this if we dont have durability Destroy(gameObject);
+            Destroy(gameObject);
 
             durability--;
             if (durability <= 0)

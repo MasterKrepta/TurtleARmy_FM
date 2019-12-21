@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91dfea3c4e2f22c41bf3fafce65e6349, type: 3}
-  m_Name: FloridaMan_AttackPower
+  m_Name: 1_Melee__Health
   m_EditorClassIdentifier: 
   IsMaxLevel: 0
   maxLevel: 2
-  Icon: {fileID: 21300000, guid: d54fa63bea83e8e428166ff99c17e002, type: 3}
-  minionName: FloridaMan
-  Stat: 2
-  Text: "FloridaMan attacks faster \n 0/2"
-  minionToUpgrade: {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}
+  Icon: {fileID: 21300000, guid: c684bf3ed5e8e18459d34ccec78a1868, type: 3}
+  minionName: 1_MeleeTurtle
+  Stat: 0
+  Text: "1_MeleeTurtle gains a speed boost \n 0/2"
+  minionToUpgrade: {fileID: 11400000, guid: 875a9830eb097584fbfac121257ab647, type: 2}
