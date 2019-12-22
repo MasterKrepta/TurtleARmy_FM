@@ -16,7 +16,12 @@ public class PlayerMelee : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            anim.SetTrigger("MeleeAttack");
+            LaunchMelee();
         }
+    }
+
+    public void LaunchMelee()
+    {
+        anim.SetTrigger("MeleeAttack");
     }
 }
