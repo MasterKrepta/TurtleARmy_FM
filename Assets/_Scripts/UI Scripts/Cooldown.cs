@@ -68,7 +68,6 @@ public class Cooldown : MonoBehaviour
                 }
             }
         }
-  
     }
 
     private void CheckForAffordable() {
