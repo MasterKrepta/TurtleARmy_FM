@@ -17,5 +17,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: cb5b99401e97f904da00133546f4d869, type: 3}
   minionName: 3_SleepyTom
   Stat: 2
-  Text: "3_SleepyTom attacks faster \n 0/2"
+  Text: "3_SleepyTom attacks faster \n 2/2"
   minionToUpgrade: {fileID: 11400000, guid: bc051795d5e633a43a8cc7a58c4b8b13, type: 2}

@@ -17,5 +17,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 6ea664849ecc23944a78ac401b1fd09e, type: 3}
   minionName: 1_MeleeTurtle
   Stat: 0
-  Text: "1_MeleeTurtle gains a speed boost \n 1/2"
+  Text: "1_MeleeTurtle gains a speed boost \n 0/2"
   minionToUpgrade: {fileID: 11400000, guid: 875a9830eb097584fbfac121257ab647, type: 2}

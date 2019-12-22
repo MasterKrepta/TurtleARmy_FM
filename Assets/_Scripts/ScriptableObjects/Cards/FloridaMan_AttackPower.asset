@@ -17,5 +17,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: d54fa63bea83e8e428166ff99c17e002, type: 3}
   minionName: FloridaMan
   Stat: 2
-  Text: "FloridaMan attacks faster \n 0/2"
+  Text: "FloridaMan attacks faster \n 1/2"
   minionToUpgrade: {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}

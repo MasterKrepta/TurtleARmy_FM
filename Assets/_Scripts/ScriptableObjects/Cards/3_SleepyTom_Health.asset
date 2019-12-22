@@ -17,5 +17,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: c684bf3ed5e8e18459d34ccec78a1868, type: 3}
   minionName: 3_SleepyTom
   Stat: 1
-  Text: "3_SleepyTom gains an increase in power \n 0/2"
+  Text: "3_SleepyTom gains an increase in power \n 1/2"
   minionToUpgrade: {fileID: 11400000, guid: bc051795d5e633a43a8cc7a58c4b8b13, type: 2}
