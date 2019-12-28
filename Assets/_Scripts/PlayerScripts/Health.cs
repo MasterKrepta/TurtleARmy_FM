@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class Health : MonoBehaviour, IHasHealth
 {
     [SerializeField] Image image;
-
+    bool onCooldown = false;
+    [SerializeField] float CooldownTime = 1;
     public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
 
@@ -26,7 +27,11 @@ public class Health : MonoBehaviour, IHasHealth
     }
 
     public void TakeDamage(float dmgAmount) {
+        if (onCooldown)     
+            return;
+        
         CurrentHealth -= dmgAmount;
+        StartCoroutine("Cooldown");
         UpdateHealthUI();
         if (CurrentHealth <= 0) {
             Destroy(gameObject);
@@ -38,5 +43,12 @@ public class Health : MonoBehaviour, IHasHealth
         image.fillAmount = CurrentHealth / MaxHealth;
     }
 
- 
+    IEnumerator Cooldown()
+    {
+        //print($"{name} is on cooldown");
+        onCooldown = true;
+        yield return new WaitForSeconds(CooldownTime);
+        onCooldown = false;
+        //print($"{name} is off cooldown");
+    }
 }
