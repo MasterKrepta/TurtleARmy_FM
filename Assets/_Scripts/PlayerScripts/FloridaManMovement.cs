@@ -29,18 +29,19 @@ public class FloridaManMovement : MonoBehaviour
         if (Helpers.Paused) { return; }
 
         rb.velocity = new Vector3(0, rb.velocity.y, dirX * moveSpeed);
-        
         RotatePlayer();
         
     }
 
      private void RotatePlayer() {
-        if (Input.GetAxisRaw("Horizontal") > 0) {
+        if (dirX > 0) {
             transform.rotation = Quaternion.Euler(0f, 0, 0f);
         }
-        else if (Input.GetAxisRaw("Horizontal") < 0) {
+        else if (dirX < 0) {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
 
         }
     }
+
+
 }
