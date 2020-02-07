@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91dfea3c4e2f22c41bf3fafce65e6349, type: 3}
+  m_Name: 3_SleepyTom_AttackPower
+  m_EditorClassIdentifier: 
+  IsMaxLevel: 0
+  maxLevel: 2
+  Icon: {fileID: 21300000, guid: dcae4fb3594a5a244b3a2b70afd61cab, type: 3}
+  minionName: 3_SleepyTom
+  Stat: 1
+  Text: "3_SleepyTom gains more power\n 0/2"
+  minionToUpgrade: {fileID: 11400000, guid: bc051795d5e633a43a8cc7a58c4b8b13, type: 2}

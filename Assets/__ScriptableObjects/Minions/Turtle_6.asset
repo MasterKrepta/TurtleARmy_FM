@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19b801be796ff694e96173105549046a, type: 3}
+  m_Name: Turtle_6
+  m_EditorClassIdentifier: 
+  MoveSpeed: 30
+  CostToSpawn: 1
+  AttackPower: 1
+  AttackDelay: 1
+  Health: 60
+  Starting_MoveSpeed: 30
+  Starting_CostToSpawn: 1
+  Starting_AttackPower: 1
+  Starting_AttackDelay: 1
+  Starting_Health: 60
+  oldValue: 
+  UpgradeLevel_Speed: 0
+  UpgradeLevel_AttackPower: 1
+  UpgradeLevel_AttackDelay: 1
+  UpgradeLevel_Health: 0
