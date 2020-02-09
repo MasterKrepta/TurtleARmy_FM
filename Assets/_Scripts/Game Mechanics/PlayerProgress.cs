@@ -75,7 +75,8 @@ public class PlayerProgress : MonoBehaviour
 		Experiance += xpToGain;
 		if (CanLevelUp())
 		{
-			LevelUp();
+			//TODO re-enable  and re-work Level up
+			//LevelUp();
 		}
 	}
 

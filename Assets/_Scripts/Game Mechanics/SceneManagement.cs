@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public static class SceneManagement
 {
-    public static int CurrentLevel = 0;
+    public static int CurrentLevel = 3;
     public static Action OnLevelOver = delegate { };
 
 
