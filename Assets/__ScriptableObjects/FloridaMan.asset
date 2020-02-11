@@ -24,6 +24,6 @@ MonoBehaviour:
   Starting_AttackDelay: 1
   Starting_Health: 10
   _upgradeSpeed: 0
-  _upgradeAttackPower: 0
+  _upgradeAttackPower: 1
   _upgradeAttackDelay: 0
-  _upgradeHealth: 0
+  _upgradeHealth: 1

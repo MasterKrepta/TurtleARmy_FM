@@ -23,7 +23,7 @@ public  class Resources : MonoBehaviour
     private void Update() {
         
         if (Time.time > nextCashGiveTime) {
-            GiveCash();
+            //GiveCash();
         }
         if (Time.time > nextMagicGiveTime) {
             GiveMagic();

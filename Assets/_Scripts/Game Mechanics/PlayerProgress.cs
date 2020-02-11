@@ -34,19 +34,18 @@ public class PlayerProgress : MonoBehaviour
 		}
 	}
 
-	[SerializeField]private int _creditBalance;
-
+	private Money _playerMoney;
 	
-	public int CreditBalance
+	public Money PlayerMoney
 	{
-		get { return _creditBalance; }
+		get { return _playerMoney; }
 		set
 		{
-			_creditBalance = value;
-			//TODO notify game (event)
+			_playerMoney = value;
+			//TODO notify game of credit change (event)
 		}
 	}
-
+	
 	[SerializeField]private int _experiance;
 
 	public int Experiance
@@ -62,6 +61,8 @@ public class PlayerProgress : MonoBehaviour
 
 	private void OnEnable()
 	{
+		_playerData = GetComponent<MinionData>().Data;
+		_playerMoney = GetComponent<MoneyData>().Money;
 		Helpers.OnLevelUp += LevelUp;
 	}
 	private void OnDisable()
@@ -101,14 +102,14 @@ public class PlayerProgress : MonoBehaviour
 	#region /* Credit System */
 		public void GiveCredits(int creditsToGive)
 		{
-			CreditBalance += creditsToGive;
+			PlayerMoney.CurrentMoney += creditsToGive;
 		}
 
 		public  void SpendCredits(int creditsToSpend)
 		{
 			if (CanSpend(creditsToSpend))
 			{
-				CreditBalance -= creditsToSpend;
+				PlayerMoney.CurrentMoney -= creditsToSpend;
 			}
 			else
 			{
@@ -120,7 +121,7 @@ public class PlayerProgress : MonoBehaviour
 	
 		public bool CanSpend(int amountToSpend)
 		{
-			if (amountToSpend > CreditBalance)
+			if (amountToSpend > _playerMoney.CurrentMoney)
 			{
 				return true;
 			}

@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 210872405396005713}
   - component: {fileID: 1112874718}
   - component: {fileID: 848221024562423961}
+  - component: {fileID: 2079834714081193261}
   m_Layer: 8
   m_Name: FloridaMan
   m_TagString: Player
@@ -165,7 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelupThreshold: 1
-  _creditBalance: 0
   _experiance: 0
 --- !u!114 &848221024562423961
 MonoBehaviour:
@@ -181,6 +181,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeAttackPoint: {fileID: 7612755281806638137}
   blockAttackPoint: {fileID: 0}
+--- !u!114 &2079834714081193261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139347709638618978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1f35a5753bc4574ea55fe6085383092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Money: {fileID: 11400000, guid: 9d16e2381a49ad748adeac3ced43fe2d, type: 2}
 --- !u!95 &707849070
 Animator:
   serializedVersion: 3
