@@ -12,6 +12,10 @@ public class Minion : ScriptableObject
     public float AttackPower = 1f;
     public float AttackDelay = 1.25f; //todo might need to rething this
     public float Health = 10f;
+    public int MaxUpgrades = 20;
+    public int CurrentUpgrades = 0;
+    public string Name = "";
+    public string Desc = "Desc Not Set";
 
     #region Starting Values
     public float Starting_MoveSpeed = 30f;

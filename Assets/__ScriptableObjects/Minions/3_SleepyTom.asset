@@ -12,17 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b801be796ff694e96173105549046a, type: 3}
   m_Name: 3_SleepyTom
   m_EditorClassIdentifier: 
+  maxLevel: 2
   MoveSpeed: 30
   CostToSpawn: 1
   AttackPower: 1
   AttackDelay: 1
   Health: 30
+  MaxUpgrades: 20
+  CurrentUpgrades: 0
+  Name: Sleepy Tom
+  Desc: Sleepy Tom Blocks incoming damage
   Starting_MoveSpeed: 30
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 30
-  UpgradeLevel_Speed: 0
-  UpgradeLevel_AttackPower: 0
-  UpgradeLevel_AttackDelay: 0
-  UpgradeLevel_Health: 0
+  _upgradeSpeed: 0
+  _upgradeAttackPower: 0
+  _upgradeAttackDelay: 0
+  _upgradeHealth: 0

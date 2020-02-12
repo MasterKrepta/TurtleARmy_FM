@@ -12,12 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b801be796ff694e96173105549046a, type: 3}
   m_Name: 1_MeleeTurtle
   m_EditorClassIdentifier: 
+  maxLevel: 2
   MoveSpeed: 31
   CostToSpawn: 1
   AttackPower: 3
   AttackDelay: 1.5
   Health: 50
-  UpgradeLevel_Speed: 0
-  UpgradeLevel_AttackPower: 0
-  UpgradeLevel_AttackDelay: 0
-  UpgradeLevel_Health: 0
+  MaxUpgrades: 20
+  CurrentUpgrades: 0
+  Name: Melee Turtle
+  Desc: This is a Common Snapping Turtle - keep your distance
+  Starting_MoveSpeed: 30
+  Starting_CostToSpawn: 1
+  Starting_AttackPower: 1
+  Starting_AttackDelay: 1
+  Starting_Health: 10
+  _upgradeSpeed: 0
+  _upgradeAttackPower: 0
+  _upgradeAttackDelay: 0
+  _upgradeHealth: 0

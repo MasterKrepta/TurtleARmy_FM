@@ -71,7 +71,7 @@ public class Cooldown : MonoBehaviour
     }
 
     private void CheckForAffordable() {
-        if (Resources.Instance.CashOnHand < Cost) {
+        if (Resources.Instance.productionOnHand < Cost) {
             button.interactable = false;
         }
         else {

@@ -5,12 +5,12 @@ using UnityEngine;
 public  class Resources : MonoBehaviour
 {
     public static Resources Instance = null;
-    [SerializeField] float CashEarningRate = 1f;
+    [SerializeField] float ProductionEarningRate = 1f;
     [SerializeField] float MagicEarningRate = .5f;
 
-    public int CashOnHand { get; private set; }
+    public int productionOnHand { get; private set; }
     public float MagicOnHand { get; private set; }
-    float nextCashGiveTime = 0;
+    float nextProductionGiveTime = 0;
     float nextMagicGiveTime = 0;
 
 
@@ -22,17 +22,17 @@ public  class Resources : MonoBehaviour
 
     private void Update() {
         
-        if (Time.time > nextCashGiveTime) {
-            //GiveCash();
+        if (Time.time > nextProductionGiveTime) {
+            GiveProduction();
         }
         if (Time.time > nextMagicGiveTime) {
             GiveMagic();
         }
     }
 
-    void GiveCash() {
-        CashOnHand += 1;
-        nextCashGiveTime = Time.time + CashEarningRate;
+    void GiveProduction() {
+        productionOnHand += 1;
+        nextProductionGiveTime = Time.time + ProductionEarningRate;
 
     }
     void GiveMagic() {
@@ -42,13 +42,13 @@ public  class Resources : MonoBehaviour
     }
 
     public bool CanAffordCheck_Minion(int cost) {
-        return CashOnHand >= cost ? true : false;
+        return productionOnHand >= cost ? true : false;
     }
     public bool CanUsePower(float cost) {
         return MagicOnHand >= cost ? true : false;
     }
     public void BuyMinion(int cost) {
-        CashOnHand -= cost;
+        productionOnHand -= cost;
     }
     public void UsePower(float cost) {
         MagicOnHand -= cost;

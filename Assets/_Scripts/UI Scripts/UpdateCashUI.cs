@@ -15,6 +15,6 @@ public class UpdateCashUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Text>().text = "Cash: " + Resources.Instance.CashOnHand;
+        GetComponent<Text>().text = "Production: " + Resources.Instance.productionOnHand;
     }
 }

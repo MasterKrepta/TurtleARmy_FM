@@ -35,7 +35,16 @@ public class PlayerProgress : MonoBehaviour
 	}
 
 	private Money _playerMoney;
+	[SerializeField] private int _production;
 	
+
+	public int Production
+	{
+		get { return _production; }
+		set { _production = value; }
+	}
+
+
 	public Money PlayerMoney
 	{
 		get { return _playerMoney; }
