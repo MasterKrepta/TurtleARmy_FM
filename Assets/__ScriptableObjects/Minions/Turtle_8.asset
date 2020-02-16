@@ -22,6 +22,7 @@ MonoBehaviour:
   CurrentUpgrades: 0
   Name: Turtle # 8
   Desc: Heavy Tank - based on an Alligator Snapping turtle
+  CostToUpgrade: 390
   Starting_MoveSpeed: 30
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1

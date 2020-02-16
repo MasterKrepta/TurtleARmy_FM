@@ -22,6 +22,7 @@ MonoBehaviour:
   CurrentUpgrades: 0
   Name: Turtle # 7
   Desc: status effecting turtle - cyborg/zombie type
+  CostToUpgrade: 380
   Starting_MoveSpeed: 30
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1

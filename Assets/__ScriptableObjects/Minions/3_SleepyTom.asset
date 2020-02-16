@@ -22,12 +22,14 @@ MonoBehaviour:
   CurrentUpgrades: 0
   Name: Sleepy Tom
   Desc: Sleepy Tom Blocks incoming damage
+  CostToUpgrade: 300
+  MinAttackDelay: 0.25
   Starting_MoveSpeed: 30
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 30
-  _upgradeSpeed: 0
-  _upgradeAttackPower: 0
-  _upgradeAttackDelay: 0
-  _upgradeHealth: 0
+  _upgradeSpeed: 5
+  _upgradeAttackPower: 1
+  _upgradeAttackDelay: 1
+  _upgradeHealth: 10

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f32727cf01af0478daf3ca7fec0671, type: 3}
   m_Name: PlayerMoney
   m_EditorClassIdentifier: 
-  StartingMoney: 100
-  CurrentMoney: 100
+  StartingMoney: 0
+  CurrentMoney: 150

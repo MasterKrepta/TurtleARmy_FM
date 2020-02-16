@@ -16,6 +16,10 @@ public class Minion : ScriptableObject
     public int CurrentUpgrades = 0;
     public string Name = "";
     public string Desc = "Desc Not Set";
+    public float CostToUpgrade = 100;
+    public float CostIncreasePerUpgrade = 1.2f;
+    public float MinAttackDelay = 0.25f;
+    
 
     #region Starting Values
     public float Starting_MoveSpeed = 30f;
@@ -26,10 +30,10 @@ public class Minion : ScriptableObject
     #endregion
 
     //TODO Remove the number system from the naming for release
-    [SerializeField] private int _upgradeSpeed;
+    [SerializeField] private float _upgradeSpeed;
 
     
-    public int UpgradeSpeed
+    public float UpgradeSpeed
     {
         get { return _upgradeSpeed; }
         set { 
@@ -42,10 +46,10 @@ public class Minion : ScriptableObject
         }
     }
 
-    [SerializeField] private int _upgradeAttackPower;
+    [SerializeField] private float _upgradeAttackPower;
 
     
-    public int UpgradeAttackPower
+    public float UpgradeAttackPower
     {
         get { return _upgradeAttackPower; }
         set 
@@ -59,10 +63,10 @@ public class Minion : ScriptableObject
         }
     }
 
-    [SerializeField] private int _upgradeAttackDelay;
+    [SerializeField] private float _upgradeAttackDelay;
 
     
-    public int UpgradeAttackDelay
+    public float UpgradeAttackDelay
     {
         get { return _upgradeAttackDelay; }
         set
@@ -78,9 +82,9 @@ public class Minion : ScriptableObject
         }
     }
 
-    [SerializeField] private int _upgradeHealth;
+    [SerializeField] private float _upgradeHealth;
 
-    public int UpgradeHealth
+    public float UpgradeHealth
     {
         get { return _upgradeHealth; }
         set 

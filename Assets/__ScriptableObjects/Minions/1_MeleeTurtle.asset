@@ -13,21 +13,22 @@ MonoBehaviour:
   m_Name: 1_MeleeTurtle
   m_EditorClassIdentifier: 
   maxLevel: 2
-  MoveSpeed: 31
+  MoveSpeed: 30
   CostToSpawn: 1
-  AttackPower: 3
-  AttackDelay: 1.5
-  Health: 50
+  AttackPower: 1
+  AttackDelay: 1
+  Health: 10
   MaxUpgrades: 20
   CurrentUpgrades: 0
   Name: Melee Turtle
   Desc: This is a Common Snapping Turtle - keep your distance
+  CostToUpgrade: 50
   Starting_MoveSpeed: 30
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 10
-  _upgradeSpeed: 0
-  _upgradeAttackPower: 0
-  _upgradeAttackDelay: 0
-  _upgradeHealth: 0
+  _upgradeSpeed: 5
+  _upgradeAttackPower: 2
+  _upgradeAttackDelay: 0.2
+  _upgradeHealth: 5
