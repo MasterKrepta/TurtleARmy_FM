@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerMoney
   m_EditorClassIdentifier: 
   StartingMoney: 0
-  CurrentMoney: 150
+  CurrentMoney: 500

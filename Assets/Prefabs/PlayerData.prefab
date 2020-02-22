@@ -43,7 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d184e166f2730540aa92e860fd18c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1112874718, guid: e901b0de18f52884a8ce1b8c6763befa, type: 3}
+  Player: {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}
+  Money: {fileID: 11400000, guid: 9d16e2381a49ad748adeac3ced43fe2d, type: 2}
   Minions:
   - {fileID: 1224970153713450337, guid: 2598815d3c0bc824a9da470df96ea7eb, type: 3}
   - {fileID: 1224970153713450337, guid: 4a751e70c79aa804d8ec5f1790f7cfd0, type: 3}
