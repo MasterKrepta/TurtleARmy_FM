@@ -66,6 +66,7 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
         SceneManagement.OnLevelOver();
         this.GetComponent<BoxCollider>().enabled = false;
         Countdown.enabled = true;
+        Countdown.gameObject.SetActive(true);
         StartCoroutine(BeginLevelCountdown());
 
     }
