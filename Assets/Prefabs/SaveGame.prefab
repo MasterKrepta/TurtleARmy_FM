@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}
+  PlayerMoney: {fileID: 11400000, guid: 9d16e2381a49ad748adeac3ced43fe2d, type: 2}
   MinionData:
   - {fileID: 11400000, guid: 875a9830eb097584fbfac121257ab647, type: 2}
   - {fileID: 11400000, guid: 3373decb333036d4e820385c21247707, type: 2}

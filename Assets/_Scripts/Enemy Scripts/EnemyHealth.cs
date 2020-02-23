@@ -30,7 +30,7 @@ public class EnemyHealth : MonoBehaviour, IHasHealth
         UpdateHealthUI();
         if (CurrentHealth <= 0) {
             Destroy(gameObject);
-            PlayerProgress.Instance.GiveCredits(5);
+            PlayerProgress.Instance.GiveCredits(5);//TODO credits are hardcoded
             PlayerProgress.Instance.EarnXP(1);
         }
     }

@@ -13,6 +13,7 @@ public class MenuManager : MonoBehaviour
     }
     public void LoadLevelSelect()
     {
+        LoadSavePlayerData.Instance.SaveAll();
         SceneManager.LoadScene(2);
     }
 
