@@ -30,6 +30,7 @@ MonoBehaviour:
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 10
+  Starting_Cost: 100
   _upgradeSpeed: 5
   _upgradeAttackPower: 2
   _upgradeAttackDelay: 0.2

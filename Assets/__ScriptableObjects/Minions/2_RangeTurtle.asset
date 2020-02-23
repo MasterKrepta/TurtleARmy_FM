@@ -23,11 +23,14 @@ MonoBehaviour:
   Name: Range Turtle
   Desc: This is a Range Turtle
   CostToUpgrade: 200
+  CostIncreasePerUpgrade: 1.2
+  MinAttackDelay: 0.25
   Starting_MoveSpeed: 30
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 20
+  Starting_Cost: 200
   _upgradeSpeed: 1
   _upgradeAttackPower: 2
   _upgradeAttackDelay: 0.3

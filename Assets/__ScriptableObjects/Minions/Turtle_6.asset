@@ -23,12 +23,14 @@ MonoBehaviour:
   Name: Diego The Healer
   Desc: cleric turtle for healing Had so much sex he saved his entire species
   CostToUpgrade: 370
+  CostIncreasePerUpgrade: 1.2
   MinAttackDelay: 0.25
   Starting_MoveSpeed: 30
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 60
+  Starting_Cost: 600
   _upgradeSpeed: 3
   _upgradeAttackPower: 5
   _upgradeAttackDelay: 0.1

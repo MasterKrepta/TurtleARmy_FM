@@ -27,6 +27,7 @@ public class Minion : ScriptableObject
     public float Starting_AttackPower = 1f;
     public float Starting_AttackDelay = 1f;
     public float Starting_Health = 10f;
+    public float Starting_Cost = 100f;
     #endregion
 
     //TODO Remove the number system from the naming for release

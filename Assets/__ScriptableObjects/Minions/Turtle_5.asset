@@ -23,12 +23,14 @@ MonoBehaviour:
   Name: Turtle # 5
   Desc: fast moving explosive/rapid attack with low health.
   CostToUpgrade: 360
+  CostIncreasePerUpgrade: 1.2
   MinAttackDelay: 0.25
   Starting_MoveSpeed: 30
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 50
+  Starting_Cost: 500
   _upgradeSpeed: 10
   _upgradeAttackPower: 2
   _upgradeAttackDelay: 0.3

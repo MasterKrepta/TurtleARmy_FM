@@ -23,12 +23,14 @@ MonoBehaviour:
   Name: Turtle # 4
   Desc: High Health, Slow Attack
   CostToUpgrade: 350
+  CostIncreasePerUpgrade: 1.2
   MinAttackDelay: 0.25
   Starting_MoveSpeed: 30
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 40
+  Starting_Cost: 400
   _upgradeSpeed: 1
   _upgradeAttackPower: 1
   _upgradeAttackDelay: 0.1

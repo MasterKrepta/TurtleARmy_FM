@@ -76,6 +76,7 @@ public class LoadSavePlayerData : MonoBehaviour
     private static void AssignDefaults(Minion m)
     {
         m.CurrentUpgrades = 0;
+        m.CostToUpgrade = m.Starting_Cost;
         m.Health = m.Starting_Health;
         m.AttackPower = m.Starting_AttackPower;
         m.MoveSpeed = m.Starting_MoveSpeed;
@@ -84,6 +85,7 @@ public class LoadSavePlayerData : MonoBehaviour
 
     public static void SaveStats(Minion m)
     {
+        PlayerPrefs.SetFloat($"{m.Name}_CostToUpgrade", m.CostToUpgrade);
         PlayerPrefs.SetInt($"{m.Name}_CurrentUpgrades", m.CurrentUpgrades);
         PlayerPrefs.SetFloat($"{m.Name}_Health", m.Health);
         PlayerPrefs.SetFloat($"{m.Name}_AttackPower", m.AttackPower);
@@ -95,6 +97,10 @@ public class LoadSavePlayerData : MonoBehaviour
 
     public static void LoadStats(Minion m)
     {
+        if (PlayerPrefs.HasKey($"{m.Name}_CostToUpgrade"))
+        {
+            m.CostToUpgrade = PlayerPrefs.GetFloat($"{m.Name}_CostToUpgrade");
+        }
         if (PlayerPrefs.HasKey($"{ m.Name}_Health"))
         {
             m.Health = PlayerPrefs.GetFloat($"{m.Name}_Health");
@@ -129,5 +135,10 @@ public class LoadSavePlayerData : MonoBehaviour
         ConfigureMinionStats();
         Debug.LogWarning("ALL PREFS DELETED");
         //todo *******************************************************************
+    }
+
+    public void GiveCreditsForTesting()
+    {
+        PlayerMoney.CurrentMoney += 1000;
     }
 }

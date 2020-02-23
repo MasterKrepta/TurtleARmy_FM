@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -98,7 +99,7 @@ public class StoreLoader : MonoBehaviour
             StoreMinions[i].GetComponentInChildren<Button>().interactable = false;
         }
 
-        currentMoney.text = Money.CurrentMoney.ToString();
-        CosttoBuy.text = MinionPrefabs[i].CostToUpgrade.ToString();
+        currentMoney.text =  Mathf.Floor(Money.CurrentMoney).ToString();
+        CosttoBuy.text = Mathf.Floor(MinionPrefabs[i].CostToUpgrade).ToString();
     }
 }
