@@ -96,7 +96,14 @@ public class StoreLoader : MonoBehaviour
 
         if (MinionPrefabs[i].CurrentUpgrades >= MinionPrefabs[i].MaxUpgrades)
         {
-            StoreMinions[i].GetComponentInChildren<Button>().interactable = false;
+            upgradeButton.interactable = false;
+            //TODO change button to display maxed out graphic
+            //StoreMinions[i].GetComponentInChildren<Button>().interactable = false;
+        }
+        else
+        {
+            upgradeButton.interactable = true;
+
         }
 
         currentMoney.text =  Mathf.Floor(Money.CurrentMoney).ToString();
