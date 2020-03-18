@@ -6,6 +6,7 @@ public class CombatAnimations : MonoBehaviour
 {
     [SerializeField] GameObject meleeAttackPoint;
     [SerializeField] GameObject blockAttackPoint;
+    [SerializeField] Wand Wand;
 
     public void MeleeAttack_On() {
         meleeAttackPoint.SetActive(true);
@@ -19,5 +20,10 @@ public class CombatAnimations : MonoBehaviour
     }
     public void Block_Off() {
         blockAttackPoint.SetActive(false);
+    }
+
+    public void FireWandAttack()
+    {
+        Wand.FireButton();
     }
 }

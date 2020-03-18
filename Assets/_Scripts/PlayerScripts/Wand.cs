@@ -9,15 +9,22 @@ public class Wand : MonoBehaviour
     [SerializeField] Transform wandCastPoint;
     float nextCastTime = 0;
 
-    
+    Animator anim;
 
+
+    private void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
         if (Helpers.Paused) { return; }
 
         if (Input.GetButtonDown("Jump")){
-            FireButton();
+            BeginCastWand();
+                
+            //FireButton();
         }
     }
 
@@ -28,14 +35,19 @@ public class Wand : MonoBehaviour
         else {return false; }
     }
     
+    public void BeginCastWand()
+    {
+        if (CanCast(wandData.Cost) == true)
+        {
+            anim.SetTrigger("WandAttack");
+        }
+    }
+
     public void FireButton()
     {
 
-        if(CanCast(wandData.Cost) == true)
-        {
             nextCastTime = Time.time + wandData.CooldownTime;
             Instantiate(wandData.WandPrefab, wandCastPoint.position, Quaternion.identity);
             Resources.Instance.UsePower(wandData.Cost);
-        }
     }
 }
