@@ -12,6 +12,7 @@ public class CauseMeleeDamage : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         IHasHealth otherHealth = other.GetComponent<IHasHealth>();
+        //! will this cause a bug? I dont think so but if something doesnt collide check here if the GO Tags are not set up correctly. 
         if (otherHealth != null && other.tag != gameObject.tag) {
             otherHealth.TakeDamage(dmgAmount);
         }

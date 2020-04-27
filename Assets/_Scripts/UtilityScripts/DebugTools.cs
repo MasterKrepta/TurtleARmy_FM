@@ -41,7 +41,7 @@ public class DebugTools : MonoBehaviour
 
     void ResetAllMinions()
     {
-        print("Reset minions");
+        //print("Reset minions");
         foreach (var item in AllMinions)
         {
             
