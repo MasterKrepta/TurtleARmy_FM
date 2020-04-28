@@ -11,12 +11,12 @@ public class CauseDamage : MonoBehaviour
         
         if (otherHealth != null && other.tag != gameObject.tag) {
             otherHealth.TakeDamage(dmgAmount);
-            print($"{this.name} hits {other.name} and causes damage");
+            //print($"{this.name} hits {other.name} and causes damage");
             Destroy(gameObject);
         }
         else
         {
-            print($"No damage from {this.name} hits {other.name}");
+            //print($"No damage from {this.name} hits {other.name}");
         }
         
     }

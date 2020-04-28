@@ -172,6 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meleeAttackPoint: {fileID: 613670119}
   blockAttackPoint: {fileID: 0}
+  Wand: {fileID: 0}
 --- !u!1 &1224970153713450337
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +267,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 34474232808694107}
+  CooldownTime: 1
+  parentRenderer: {fileID: 64859433941318495}
+  HitColor: {r: 1, g: 0, b: 0.018100739, a: 1}
+  originals:
+  - {r: 0.25253043, g: 0.8490566, b: 0.244304, a: 1}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &-5136541352483323965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,6 +706,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2ebd45a70664e74409d6f9772500dd45, type: 2}
+    - target: {fileID: 1295615916944168993, guid: 5603d5aabbba72948885bfbce06dd1c6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5603d5aabbba72948885bfbce06dd1c6, type: 3}
 --- !u!1 &65223310796614099 stripped
@@ -713,6 +728,12 @@ Transform:
 --- !u!4 &66929599666699883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1158058152255686801, guid: 5603d5aabbba72948885bfbce06dd1c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1224970153291527930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &64859433941318495 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1160128335158840741, guid: 5603d5aabbba72948885bfbce06dd1c6,
     type: 3}
   m_PrefabInstance: {fileID: 1224970153291527930}
   m_PrefabAsset: {fileID: 0}
