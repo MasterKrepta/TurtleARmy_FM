@@ -66,29 +66,30 @@ public class Health : MonoBehaviour, IHasHealth
     }
     IEnumerator Flash()
     {
-
-        
-        foreach (Renderer r in renderers)
+        if (renderers != null)
         {
-            print(r.material.color.ToString());
-            r.material.SetColor("_BaseColor", HitColor);
-            print(r.material.color.ToString() + " After");
-        }
-
-        yield return new WaitForSeconds(flashTime);
-
-        foreach (Renderer r in renderers)
-        {
-            if (r != null)
+            foreach (Renderer r in renderers)
             {
-                for (int i = 0; i < renderers.Length; i++)
-                {
-                    renderers[i].material.SetColor("_BaseColor",  originals[i]);
-                    
-                }
+                r.material.SetColor("_BaseColor", HitColor);
+            }
 
+            yield return new WaitForSeconds(flashTime);
+
+            foreach (Renderer r in renderers)
+            {
+                if (r != null)
+                {
+                    for (int i = 0; i < renderers.Length; i++)
+                    {
+                        renderers[i].material.SetColor("_BaseColor", originals[i]);
+                    }
+
+                }
             }
         }
+            
+
+        
     }
 
     void GetOriginalColors()
