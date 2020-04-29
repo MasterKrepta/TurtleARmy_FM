@@ -16,8 +16,8 @@ MonoBehaviour:
   MoveSpeed: 30
   CostToSpawn: 1
   AttackPower: 1
-  AttackDelay: 1
-  Health: 40
+  AttackDelay: 2
+  Health: 100
   MaxUpgrades: 20
   CurrentUpgrades: 0
   Name: Turtle # 4
@@ -31,7 +31,7 @@ MonoBehaviour:
   Starting_AttackDelay: 1
   Starting_Health: 40
   Starting_Cost: 400
-  _upgradeSpeed: 1
-  _upgradeAttackPower: 1
-  _upgradeAttackDelay: 0.1
-  _upgradeHealth: 10
+  _upgradeSpeed: 0
+  _upgradeAttackPower: 0
+  _upgradeAttackDelay: 0
+  _upgradeHealth: 0

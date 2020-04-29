@@ -79,7 +79,8 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
 
         yield return new WaitForSeconds(countdownTime);
         //TODO Manage Level progression
-        SceneManagement.LoadNextLevel(2);
+        SceneManagement.CurrentLevel++;
+        SceneManagement.LoadNextLevel();
 
         //SceneManagement.CurrentLevel++;
         //if (SceneManagement.CurrentLevel > UnityEngine.SceneManagement.SceneManager.sceneCount)

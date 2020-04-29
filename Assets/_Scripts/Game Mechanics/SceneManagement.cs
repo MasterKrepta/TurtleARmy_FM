@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 
 public static class SceneManagement
 {
-    public static int CurrentLevel = 3;
+    public static int CurrentLevel = 2; //TODO change this with level select system
     public static Action OnLevelOver = delegate { };
 
 
-    public static void LoadNextLevel(int currentLevel)
+    public static void LoadNextLevel()
     {
-        SceneManager.LoadScene(currentLevel);
+        SceneManager.LoadScene(CurrentLevel);
     }
 }
