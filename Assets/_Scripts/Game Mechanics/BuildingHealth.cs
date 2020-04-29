@@ -17,17 +17,9 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
 
     [SerializeField] Image image;
 
-    [SerializeField] GameObject parentRenderer;
-    [SerializeField] Color HitColor = Color.red;
-    [SerializeField] Color[] originals = new Color[5]; //TODO  Evaluate this number, it should not be this large in the final game. 
-    Renderer[] renderers;
-    float flashTime = 0.2f;
-
-
     private void OnEnable()
     {
-        renderers = parentRenderer.GetComponentsInChildren<Renderer>();
-        GetOriginalColors();
+        
         Countdown.enabled = false;
         try
         {
@@ -48,7 +40,8 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
 
         CurrentHealth -= amount;
         UpdateHealthUI();
-        StartCoroutine("Flash");
+        //StartCoroutine("Flash");
+        GetComponentInChildren<FlashOnHit>().FlashColors();
         if (CurrentHealth <= 0)
         {
             LevelEnd();
@@ -97,42 +90,5 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
         //SceneManagement.LoadNextLevel(SceneManagement.CurrentLevel);
 
     }
-
-    IEnumerator Flash()
-    {
-        if (renderers != null)
-        {
-            foreach (Renderer r in renderers)
-            {
-                r.material.SetColor("_BaseColor", HitColor);
-            }
-
-            yield return new WaitForSeconds(flashTime);
-
-            foreach (Renderer r in renderers)
-            {
-                if (r != null)
-                {
-                    for (int i = 0; i < renderers.Length; i++)
-                    {
-                        renderers[i].material.SetColor("_BaseColor", originals[i]);
-
-                    }
-
-                }
-            }
-        }
-
-    }
-
-    void GetOriginalColors()
-    {
-
-        for (int i = 0; i < renderers.Length; i++)
-        {
-            originals[i] = renderers[i].material.color;
-        }
-    }
-
 
 }

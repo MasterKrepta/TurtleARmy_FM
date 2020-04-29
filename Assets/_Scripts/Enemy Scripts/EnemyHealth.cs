@@ -17,27 +17,33 @@ public class EnemyHealth : MonoBehaviour, IHasHealth
     Renderer[] renderers;
     float flashTime = 0.2f;
 
-    private void OnEnable() {
-        try {
+    private void OnEnable()
+    {
+        try
+        {
             MaxHealth = GetComponent<MinionData>().Data.Health;
         }
-        catch (Exception) {
+        catch (Exception)
+        {
             Debug.LogWarning($"{gameObject.name} REFACTOR: There is no Data structure on this gameobject");
 
         }
-        
+
 
         CurrentHealth = MaxHealth;
         image.fillAmount = CurrentHealth / MaxHealth;
     }
 
-    public void TakeDamage(float dmgAmount) {
+    public void TakeDamage(float dmgAmount)
+    {
         CurrentHealth -= dmgAmount;
-        StartCoroutine("Flash");
+        GetComponentInChildren<FlashOnHit>().FlashColors();
+        //Helpers.OnTakeDamage(this.transform.root.gameObject);
         UpdateHealthUI();
 
-        if (CurrentHealth <= 0) {
-            
+        if (CurrentHealth <= 0)
+        {
+
             Destroy(gameObject);
             PlayerProgress.Instance.GiveCredits(5);//TODO credits are hardcoded
             PlayerProgress.Instance.EarnXP(1);
@@ -45,45 +51,8 @@ public class EnemyHealth : MonoBehaviour, IHasHealth
 
     }
 
-    private void UpdateHealthUI() {
+    private void UpdateHealthUI()
+    {
         image.fillAmount = CurrentHealth / MaxHealth;
     }
-
-    IEnumerator Flash()
-    {
-        if (renderers != null)
-        {
-            foreach (Renderer r in renderers)
-            {
-                r.material.SetColor("_BaseColor", HitColor);
-            }
-
-            yield return new WaitForSeconds(flashTime);
-
-            foreach (Renderer r in renderers)
-            {
-                if (r != null)
-                {
-                    for (int i = 0; i < renderers.Length; i++)
-                    {
-                        renderers[i].material.SetColor("_BaseColor", originals[i]);
-
-                    }
-
-                }
-            }
-        }
-
-    }
-
-    void GetOriginalColors()
-    {
-
-        for (int i = 0; i < renderers.Length; i++)
-        {
-            originals[i] = renderers[i].material.color;
-        }
-    }
-
-
 }
