@@ -31,7 +31,7 @@ public class Health : MonoBehaviour, IHasHealth
     }
 
     public void TakeDamage(float dmgAmount) {
-        if (onCooldown)     
+        if (onCooldown)
             return;
         
         CurrentHealth -= dmgAmount;

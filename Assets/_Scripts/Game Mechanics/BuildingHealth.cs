@@ -14,6 +14,7 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
     float currentTime = 5;
     public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
+    
 
     [SerializeField] Image image;
 
@@ -21,6 +22,9 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
     {
         
         Countdown.enabled = false;
+
+        Helpers.OnPlayerDeath += LevelEnd;
+
         try
         {
             MaxHealth = levelData.BaseHealth;
@@ -35,6 +39,12 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
         CurrentHealth = MaxHealth;
         image.fillAmount = CurrentHealth / MaxHealth;
     }
+
+    private void OnDisable()
+    {
+        Helpers.OnPlayerDeath -= LevelEnd;
+    }
+
     public void TakeDamage(float amount)
     {
 
@@ -57,13 +67,29 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
     {
         if (Countdown.enabled)
         {
-            Countdown.text = $"Next Level Starts in: {Mathf.FloorToInt(currentTime -= Time.deltaTime).ToString()}";
-            if (currentTime <=0)
+            if (Helpers.GameOver == true)
             {
-                Countdown.enabled = false;
+                Countdown.text = $"Game Over: Return to Menu in: {Mathf.FloorToInt(currentTime -= Time.deltaTime).ToString()}";
+                if (currentTime <= 0)
+                {
+                    Countdown.enabled = false;
+                }
             }
+            else
+            {
+                Countdown.text = $"Next Level Starts in: {Mathf.FloorToInt(currentTime -= Time.deltaTime).ToString()}";
+                if (currentTime <= 0)
+                {
+                    Countdown.enabled = false;
+                }
+            }
+        
         }
+ 
     }
+
+    
+
     private void LevelEnd()
     {
         SceneManagement.OnLevelOver();
@@ -79,7 +105,7 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
 
         yield return new WaitForSeconds(countdownTime);
         //TODO Manage Level progression
-        SceneManagement.CurrentLevel++;
+        //SceneManagement.CurrentLevel++;
         SceneManagement.LoadNextLevel();
 
         //SceneManagement.CurrentLevel++;

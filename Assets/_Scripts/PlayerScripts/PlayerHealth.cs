@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour, IHasHealth
 
     public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
+    bool onCooldown = false;
+    [SerializeField] float CooldownTime = 1;
 
     private void OnEnable() {
         MaxHealth = GetComponent<MinionData>().Data.Health;
@@ -17,7 +19,11 @@ public class PlayerHealth : MonoBehaviour, IHasHealth
     }
 
     public void TakeDamage(float dmgAmount) {
+        if (onCooldown)
+            return;
+
         CurrentHealth -= dmgAmount;
+        StartCoroutine("Cooldown");
         UpdateHealthUI();
         if (CurrentHealth <= 0) {
             Helpers.OnPlayerDeath();
@@ -27,5 +33,14 @@ public class PlayerHealth : MonoBehaviour, IHasHealth
 
     private void UpdateHealthUI() {
         image.fillAmount = CurrentHealth / MaxHealth;
+    }
+
+    IEnumerator Cooldown()
+    {
+        //print($"{name} is on cooldown");
+        onCooldown = true;
+        yield return new WaitForSeconds(CooldownTime);
+        onCooldown = false;
+        //print($"{name} is off cooldown");
     }
 }

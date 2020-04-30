@@ -24,7 +24,7 @@ public static class Helpers
         if (Paused) { Time.timeScale = 0;} else{ Time.timeScale = 1;}
         //Debug.Log($"Paused value is: {Paused}");
     }
-    static void CallGameOver()
+    public static void CallGameOver()
     {
         GameOver = true;
     }
