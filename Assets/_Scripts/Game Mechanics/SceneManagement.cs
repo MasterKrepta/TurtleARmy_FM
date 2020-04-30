@@ -15,4 +15,9 @@ public static class SceneManagement
     {
         SceneManager.LoadScene(CurrentLevel);
     }
+
+    public static void LoadSelectedLevel(int id)
+    {
+        SceneManager.LoadScene(CurrentLevel);
+    }
 }

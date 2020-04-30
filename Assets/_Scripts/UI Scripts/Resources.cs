@@ -31,7 +31,8 @@ public  class Resources : MonoBehaviour
     }
 
     void GiveProduction() {
-        productionOnHand += 1;
+        //! Resource Generation
+        productionOnHand += 5;
         nextProductionGiveTime = Time.time + ProductionEarningRate;
 
     }

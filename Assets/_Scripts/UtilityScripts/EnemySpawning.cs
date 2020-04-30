@@ -42,7 +42,7 @@ public class EnemySpawning : MonoBehaviour
                     break;
                 }
             }
-            go.transform.position += new Vector3(Random.Range(-8, 8), 0, 0);
+            go.transform.position += new Vector3(Random.Range(-7, 3), 0, 0); //TODO this is enemy spawning pos
 
             timeToNextSpawn = Time.time + data.SpawnRate;
         }

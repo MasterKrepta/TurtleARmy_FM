@@ -62,7 +62,7 @@ public class LevelUpMenu : MonoBehaviour
 
     private void ConfigureCards(Scene scene, LoadSceneMode mode)
     {
-        UpgradeCard[] allCards = (UpgradeCard[])FindObjectsOfTypeAll(typeof(UpgradeCard));
+        UpgradeCard[] allCards =  Resources.FindObjectsOfTypeAll(typeof(UpgradeCard)) as UpgradeCard[];
         
         foreach (var item in allCards)
         {

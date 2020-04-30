@@ -11,11 +11,6 @@ public class EnemyHealth : MonoBehaviour, IHasHealth
     public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
 
-    [SerializeField] GameObject parentRenderer;
-    [SerializeField] Color HitColor = Color.red;
-    [SerializeField] Color[] originals = new Color[5]; //TODO  Evaluate this number, it should not be this large in the final game. 
-    Renderer[] renderers;
-    float flashTime = 0.2f;
 
     private void OnEnable()
     {
