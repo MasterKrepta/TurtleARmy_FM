@@ -46,13 +46,20 @@ public class DetectTarget : MonoBehaviour
         //TODO change this to include anyone on the other layer so it we stop and attack no matter what. 
         //print($"{gameObject.name} is looking for layer {hitLayer.value}");
 
-        if (Physics.SphereCast(transform.position, detectRadius / 2, transform.forward, out hit, detectRadius/2, hitLayer)) {
+        if (Physics.SphereCast(transform.position, detectRadius / 2, transform.forward, out hit, detectRadius/2, hitLayer))
+        {
+            if (hit.collider.GetComponent<IHasHealth>() == null)
+                return;
+
             targetLock = true;
             //Debug.Log($"{this.name} has hit {hit.transform.name}");
-            if (Time.time >= nextAbility) {
+            if (Time.time >= nextAbility)
+            {
                 On_AbilityActivate();
                 ResetAbility();
             }
+
+
         }
         else {
             targetLock = false;

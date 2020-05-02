@@ -6,7 +6,7 @@ public class Bomb : MonoBehaviour
 {
 
     public float explodeTime = 2f;
-    public float lifeTime = .25f;
+
     public float dmg = 5f; 
     public GameObject particle;
 
@@ -29,7 +29,7 @@ public class Bomb : MonoBehaviour
         GameObject go = Instantiate(particle, transform.position, Quaternion.identity);
         //go.GetComponent<AudioSource>().Play();
         Destroy(go, 1f);
-        //Destroy(go, lifeTime);
+        
     }
 
     private void OnTriggerEnter(Collider other)

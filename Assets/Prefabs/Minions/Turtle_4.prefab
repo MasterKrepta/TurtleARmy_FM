@@ -134,9 +134,9 @@ MonoBehaviour:
   meleeAttackPoint: {fileID: 0}
   blockAttackPoint: {fileID: 0}
   ThrowPoint: {fileID: 7115066121746766984}
-  bombPrefab: {fileID: 6879207378827325808, guid: 5ef7affb263d88148bbf66ca1a3521ad,
+  bombPrefab: {fileID: 1928639260097852208, guid: 5ef7affb263d88148bbf66ca1a3521ad,
     type: 3}
-  bombThrowSpeed: 10
+  bombThrowSpeed: 12
   Wand: {fileID: 0}
 --- !u!1 &1224970153713450337
 GameObject:
@@ -298,13 +298,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5771993146128747220}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.09229599, y: -0.7010574, z: -0.09229599, w: 0.7010574}
   m_LocalPosition: {x: -0.8, y: 0.02, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 66929599666699883}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: -15, y: -90, z: 0}
 --- !u!1 &5892352478391190998
 GameObject:
   m_ObjectHideFlags: 0
