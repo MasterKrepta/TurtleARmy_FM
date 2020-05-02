@@ -8,7 +8,9 @@ public class CombatAnimations : MonoBehaviour
     [SerializeField] GameObject blockAttackPoint;
     public Transform ThrowPoint;
     public GameObject bombPrefab;
-    public float bombThrowSpeed = 100f;
+    public Transform FlashbangThrowPoint;
+    public GameObject FlashbangPrefab;
+    public float bombThrowSpeed = 12f;
 
     public GameObject KamakazeExplosion;
 
@@ -41,6 +43,12 @@ public class CombatAnimations : MonoBehaviour
     {
         GameObject go =  Instantiate(bombPrefab, ThrowPoint.position, ThrowPoint.rotation);
         go.GetComponent<Rigidbody>().AddForce(ThrowPoint.forward * bombThrowSpeed, ForceMode.Impulse);
+    }
+
+    public void ThrowFlashbang()
+    {
+        GameObject go = Instantiate(FlashbangPrefab, FlashbangThrowPoint.position, FlashbangThrowPoint.rotation);
+        go.GetComponent<Rigidbody>().AddForce(FlashbangThrowPoint.forward * bombThrowSpeed, ForceMode.Impulse);
     }
 
     public void ActivateKamakaze()

@@ -15,5 +15,6 @@ MonoBehaviour:
   LevelName: Level_01
   EnemyTypes:
   - {fileID: 8905668614926316912, guid: 5cf682224d674764b93b7ab37baaa6d4, type: 3}
+  - {fileID: 8905668614926316912, guid: 404f004532890a5459bea5e6a1ece19b, type: 3}
   SpawnRate: 5
   BaseHealth: 50
