@@ -6,6 +6,10 @@ public class CombatAnimations : MonoBehaviour
 {
     [SerializeField] GameObject meleeAttackPoint;
     [SerializeField] GameObject blockAttackPoint;
+    public Transform ThrowPoint;
+    public GameObject bombPrefab;
+    public float bombThrowSpeed = 100f;
+
     [SerializeField] Wand Wand;
 
     public void MeleeAttack_On() {
@@ -29,5 +33,11 @@ public class CombatAnimations : MonoBehaviour
     public void FireWandAttack()
     {
         Wand.FireButton();
+    }
+
+    public void ThrowBomb()
+    {
+        GameObject go =  Instantiate(bombPrefab, ThrowPoint.position, ThrowPoint.rotation);
+        go.GetComponent<Rigidbody>().AddForce(ThrowPoint.forward * bombThrowSpeed, ForceMode.Impulse);
     }
 }

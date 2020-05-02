@@ -46,6 +46,10 @@ public class LoadSavePlayerData : MonoBehaviour
             PlayerMoney.CurrentMoney = PlayerPrefs.GetFloat("CurrentMoney");
 
         }
+        else
+        {
+            PlayerMoney.CurrentMoney = PlayerMoney.StartingMoney;
+        }
     }
 
     private void ConfigureMinionStats()
