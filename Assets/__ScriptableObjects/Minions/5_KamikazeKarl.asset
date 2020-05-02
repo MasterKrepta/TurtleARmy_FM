@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 5_KamikazeKarl
   m_EditorClassIdentifier: 
   maxLevel: 2
-  MoveSpeed: 50
+  MoveSpeed: 70
   CostToSpawn: 1
   AttackPower: 1
   AttackDelay: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
   CostToUpgrade: 360
   CostIncreasePerUpgrade: 1.2
   MinAttackDelay: 0.25
-  Starting_MoveSpeed: 50
+  Starting_MoveSpeed: 70
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1

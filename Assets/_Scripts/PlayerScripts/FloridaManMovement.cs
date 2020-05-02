@@ -14,7 +14,7 @@ public class FloridaManMovement : MonoBehaviour
     {
         
         rb = GetComponent<Rigidbody>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update() {
@@ -27,7 +27,14 @@ public class FloridaManMovement : MonoBehaviour
     private void FixedUpdate() 
     {
         if (Helpers.Paused) { return; }
-
+        if (dirX != 0)
+        {
+            anim.SetBool("Moving", true);
+        }
+        else
+        {
+            anim.SetBool("Moving", false);
+        }
         rb.velocity = new Vector3(0, rb.velocity.y, dirX * moveSpeed);
         RotatePlayer();
         

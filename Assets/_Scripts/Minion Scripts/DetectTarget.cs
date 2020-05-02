@@ -46,6 +46,7 @@ public class DetectTarget : MonoBehaviour
         //TODO change this to include anyone on the other layer so it we stop and attack no matter what. 
         //print($"{gameObject.name} is looking for layer {hitLayer.value}");
 
+        //todo the radius is causing an issue with the kamakaze character detection. 
         if (Physics.SphereCast(transform.position, detectRadius / 2, transform.forward, out hit, detectRadius/2, hitLayer))
         {
             if (hit.collider.GetComponent<IHasHealth>() == null)

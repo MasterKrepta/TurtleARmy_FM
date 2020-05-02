@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6549312942367367545}
   - component: {fileID: 6549312942367367546}
   - component: {fileID: 6549312942367367547}
-  - component: {fileID: 6549312942367367548}
   - component: {fileID: 6549312942367367549}
   - component: {fileID: 6549312942367367550}
+  - component: {fileID: 4819676359405401696}
   m_Layer: 8
   m_Name: playerBullet
   m_TagString: Player
@@ -82,19 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &6549312942367367548
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6549312942367367551}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6549312942367367549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,3 +109,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmgAmount: 2
+--- !u!65 &4819676359405401696
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6549312942367367551}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 40.28, y: 5.0486183, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
