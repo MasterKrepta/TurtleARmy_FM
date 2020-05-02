@@ -119,6 +119,26 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &691153045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65223310796614099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e4df3d68c09d14a8dae8647fe97c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeAttackPoint: {fileID: 0}
+  blockAttackPoint: {fileID: 0}
+  ThrowPoint: {fileID: 0}
+  bombPrefab: {fileID: 0}
+  bombThrowSpeed: 100
+  KamakazeExplosion: {fileID: 7749400425057204102, guid: ab0a0af1b24d18d4893496a32fd8e251,
+    type: 3}
+  Wand: {fileID: 0}
 --- !u!1 &1224970153713450337
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,8 +154,9 @@ GameObject:
   - component: {fileID: 1345997780137390884}
   - component: {fileID: -777322813730713592}
   - component: {fileID: 5035197051606281315}
+  - component: {fileID: 1757659188}
   m_Layer: 8
-  m_Name: Turtle_5
+  m_Name: 5_KamikazeKarl
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,10 +246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027f20492d6272849a383a9f69975f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectRadius: 20
+  detectRadius: 5
   hitLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   AbilityDelay: 1.5
 --- !u!114 &5035197051606281315
 MonoBehaviour:
@@ -243,6 +264,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: d7ac7a4f9b40a6840b834526962a00a0, type: 2}
+--- !u!114 &1757659188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224970153713450337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e6a952a771374f4a900260064f1b5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kamikazePrefab: {fileID: 7749400425057204102, guid: ab0a0af1b24d18d4893496a32fd8e251,
+    type: 3}
 --- !u!1 &5892352478391190998
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +663,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5603d5aabbba72948885bfbce06dd1c6, type: 3}
+--- !u!1 &65223310796614099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1159764436831887145, guid: 5603d5aabbba72948885bfbce06dd1c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1224970153291527930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &66644009423577517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1158326165345933143, guid: 5603d5aabbba72948885bfbce06dd1c6,

@@ -6,40 +6,20 @@ public class Bomb : MonoBehaviour
 {
 
     public float explodeTime = 2f;
-
-    public float dmg = 5f; 
     public GameObject particle;
-
-
-
-    Collider collider;
 
     private void Start()
     {
-
-        collider = GetComponent<Collider>();
-        collider.enabled = false;
         Invoke("Explode", explodeTime);
     }
 
     void Explode()
     {
-
-        collider.enabled = true;
+        //collider.enabled = true;
         GameObject go = Instantiate(particle, transform.position, Quaternion.identity);
         //go.GetComponent<AudioSource>().Play();
         Destroy(go, 1f);
         
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        var damageable = other.GetComponent<IHasHealth>();
-        if (damageable != null)
-        {
-            damageable.TakeDamage(dmg);
-            Destroy(this.gameObject);
-        }
     }
 
 }

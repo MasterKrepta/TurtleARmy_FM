@@ -10,6 +10,8 @@ public class CombatAnimations : MonoBehaviour
     public GameObject bombPrefab;
     public float bombThrowSpeed = 100f;
 
+    public GameObject KamakazeExplosion;
+
     [SerializeField] Wand Wand;
 
     public void MeleeAttack_On() {
@@ -39,5 +41,11 @@ public class CombatAnimations : MonoBehaviour
     {
         GameObject go =  Instantiate(bombPrefab, ThrowPoint.position, ThrowPoint.rotation);
         go.GetComponent<Rigidbody>().AddForce(ThrowPoint.forward * bombThrowSpeed, ForceMode.Impulse);
+    }
+
+    public void ActivateKamakaze()
+    {
+        GameObject go = Instantiate(KamakazeExplosion, transform.position, Quaternion.identity);
+        Destroy(go, 1f);
     }
 }

@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Cooldown : MonoBehaviour
 {
     Army Army;
+    public KeyCode keycode;
     [SerializeField] bool isUnlocked = false;
     bool onCooldown = false;
     [SerializeField]Image cooldownUI;
@@ -31,7 +32,8 @@ public class Cooldown : MonoBehaviour
     }
 
 
-    
+
+
     public void DisableButton() {
         if (Resources.Instance.CanAffordCheck_Minion(Cost)) {
             Resources.Instance.BuyMinion(Cost);
@@ -56,6 +58,12 @@ public class Cooldown : MonoBehaviour
     }
 
     private void Update() {
+        if (Input.GetKeyDown(keycode))
+        {
+            DisableButton();
+        }
+
+
         if (isUnlocked) { // ! Safty check so we dont enable something we havent unlocked yet 
             //TODO dont even show the button if its not unlocked in start
             CheckForAffordable();

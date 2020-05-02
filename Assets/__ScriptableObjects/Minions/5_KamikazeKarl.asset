@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19b801be796ff694e96173105549046a, type: 3}
-  m_Name: Turtle_5
+  m_Name: 5_KamikazeKarl
   m_EditorClassIdentifier: 
   maxLevel: 2
-  MoveSpeed: 30
+  MoveSpeed: 50
   CostToSpawn: 1
   AttackPower: 1
   AttackDelay: 1
@@ -25,13 +25,13 @@ MonoBehaviour:
   CostToUpgrade: 360
   CostIncreasePerUpgrade: 1.2
   MinAttackDelay: 0.25
-  Starting_MoveSpeed: 30
+  Starting_MoveSpeed: 50
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 50
   Starting_Cost: 500
-  _upgradeSpeed: 10
-  _upgradeAttackPower: 2
-  _upgradeAttackDelay: 0.3
-  _upgradeHealth: 1
+  _upgradeSpeed: 0
+  _upgradeAttackPower: 0
+  _upgradeAttackDelay: 0
+  _upgradeHealth: 0

@@ -17,7 +17,7 @@ MonoBehaviour:
   CostToSpawn: 1
   AttackPower: 1
   AttackDelay: 1
-  Health: 10
+  Health: 30
   MaxUpgrades: 20
   CurrentUpgrades: 0
   Name: 
