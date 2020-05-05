@@ -118,4 +118,8 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
 
     }
 
+    public void HealDamage(float healAmount)
+    {
+        CurrentHealth += healAmount;
+    }
 }

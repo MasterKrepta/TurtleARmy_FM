@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19b801be796ff694e96173105549046a, type: 3}
-  m_Name: Turtle_6
+  m_Name: 6_DiegoHealing
   m_EditorClassIdentifier: 
   maxLevel: 2
   MoveSpeed: 30
@@ -31,7 +31,7 @@ MonoBehaviour:
   Starting_AttackDelay: 1
   Starting_Health: 60
   Starting_Cost: 600
-  _upgradeSpeed: 3
-  _upgradeAttackPower: 5
-  _upgradeAttackDelay: 0.1
-  _upgradeHealth: 5
+  _upgradeSpeed: 0
+  _upgradeAttackPower: 0
+  _upgradeAttackDelay: 0
+  _upgradeHealth: 0

@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1.23}
+  m_AnchoredPosition: {x: 0, y: 2.279985}
   m_SizeDelta: {x: 142.279, y: 70.363}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &114784068
@@ -119,6 +119,29 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &673446236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65223310796614099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e4df3d68c09d14a8dae8647fe97c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeAttackPoint: {fileID: 0}
+  blockAttackPoint: {fileID: 0}
+  ThrowPoint: {fileID: 0}
+  bombPrefab: {fileID: 0}
+  FlashbangThrowPoint: {fileID: 0}
+  FlashbangPrefab: {fileID: 0}
+  bombThrowSpeed: 12
+  KamakazeExplosion: {fileID: 0}
+  HealEffect: {fileID: 7749400425057204102, guid: b56137173e7f1ab49ac991fc421b0677,
+    type: 3}
+  Wand: {fileID: 0}
 --- !u!1 &1224970153713450337
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,8 +157,9 @@ GameObject:
   - component: {fileID: 1345997780137390884}
   - component: {fileID: 278155741092552793}
   - component: {fileID: -2942661538713978845}
+  - component: {fileID: 673446235}
   m_Layer: 8
-  m_Name: Turtle_6
+  m_Name: 6_DiegoHealing
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,8 +252,8 @@ MonoBehaviour:
   detectRadius: 20
   hitLayer:
     serializedVersion: 2
-    m_Bits: 0
-  AbilityDelay: 1.5
+    m_Bits: 512
+  AbilityDelay: 2
 --- !u!114 &-2942661538713978845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +267,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: ee90bf36ea2e58a429ff6bf3f0fcd50c, type: 2}
+--- !u!114 &673446235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224970153713450337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a769ae116f7294195b731a633bb85f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HealTime: 2
+  HealAmount: 5
 --- !u!1 &5892352478391190998
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +666,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5603d5aabbba72948885bfbce06dd1c6, type: 3}
+--- !u!1 &65223310796614099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1159764436831887145, guid: 5603d5aabbba72948885bfbce06dd1c6,
+    type: 3}
+  m_PrefabInstance: {fileID: 1224970153291527930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &66644009423577517 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1158326165345933143, guid: 5603d5aabbba72948885bfbce06dd1c6,

@@ -56,5 +56,10 @@ public class Health : MonoBehaviour, IHasHealth
         onCooldown = false;
         //print($"{name} is off cooldown");
     }
-    
+
+    public void HealDamage(float healAmount)
+    {
+        print($"{ this.gameObject.name} has been healed");
+        CurrentHealth += healAmount;
+    }
 }

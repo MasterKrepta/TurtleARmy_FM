@@ -14,6 +14,8 @@ public class CombatAnimations : MonoBehaviour
 
     public GameObject KamakazeExplosion;
 
+    public GameObject HealEffect;
+
     [SerializeField] Wand Wand;
 
     public void MeleeAttack_On() {
@@ -54,6 +56,12 @@ public class CombatAnimations : MonoBehaviour
     public void ActivateKamakaze()
     {
         GameObject go = Instantiate(KamakazeExplosion, transform.position, Quaternion.identity);
+        Destroy(go, 1f);
+    }
+
+    public void ActivateHeal()
+    {
+        GameObject go = Instantiate(HealEffect, transform.position, Quaternion.identity);
         Destroy(go, 1f);
     }
 }

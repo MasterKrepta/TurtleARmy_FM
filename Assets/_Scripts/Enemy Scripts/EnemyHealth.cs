@@ -50,4 +50,10 @@ public class EnemyHealth : MonoBehaviour, IHasHealth
     {
         image.fillAmount = CurrentHealth / MaxHealth;
     }
+
+    public void HealDamage(float healAmount)
+    {
+        print($"{ this.gameObject.name} has been healed");
+        CurrentHealth += healAmount;
+    }
 }
