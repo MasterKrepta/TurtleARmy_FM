@@ -20,6 +20,8 @@ public class ThrowFlashbang : MonoBehaviour
     private void OnDisable()
     {
         detectTarget.On_AbilityActivate -= PeformAction;
+
+
     }
 
 

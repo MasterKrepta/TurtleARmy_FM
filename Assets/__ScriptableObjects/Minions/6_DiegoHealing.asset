@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 6_DiegoHealing
   m_EditorClassIdentifier: 
   maxLevel: 2
-  MoveSpeed: 30
+  MoveSpeed: 40
   CostToSpawn: 1
   AttackPower: 1
   AttackDelay: 1
-  Health: 60
-  MaxUpgrades: 20
+  Health: 9000
+  MaxUpgrades: 25
   CurrentUpgrades: 0
   Name: Diego The Healer
   Desc: cleric turtle for healing Had so much sex he saved his entire species
@@ -29,7 +29,7 @@ MonoBehaviour:
   Starting_CostToSpawn: 1
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
-  Starting_Health: 60
+  Starting_Health: 9000
   Starting_Cost: 600
   _upgradeSpeed: 0
   _upgradeAttackPower: 0

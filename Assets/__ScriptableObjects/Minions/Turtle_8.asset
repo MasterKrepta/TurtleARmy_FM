@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Turtle_8
   m_EditorClassIdentifier: 
   maxLevel: 2
-  MoveSpeed: 30
+  MoveSpeed: 50
   CostToSpawn: 1
   AttackPower: 1
   AttackDelay: 1
