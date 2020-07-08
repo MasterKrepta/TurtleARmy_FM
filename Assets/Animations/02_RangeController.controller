@@ -53,7 +53,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 01_meleeController
+  m_Name: 02_RangeController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: MeleeTrigger
@@ -82,7 +82,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MeleeTurltleWalk
+  m_Name: RangeTurtleWalk
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -96,7 +96,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: -338644888740401610, guid: fba01cf3beab1724c84d55b8ddff243f,
+  m_Motion: {fileID: -338644888740401610, guid: fd287f5238a018e44b951e8ad2bfeb96,
     type: 3}
   m_Tag: 
   m_SpeedParameter: 
