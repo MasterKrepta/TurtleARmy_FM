@@ -31,6 +31,7 @@ public class DebugTools : MonoBehaviour
 
     private void OnEnable()
     {
+        Debug.LogWarning("DEBUG TOOLS IN EFFECT: in case of any strange behaviour");
         Helpers.OnResetCards += ResetAllCards;
     }
 

@@ -26,7 +26,7 @@ MonoBehaviour:
   CostIncreasePerUpgrade: 1.2
   MinAttackDelay: 0.25
   Starting_MoveSpeed: 70
-  Starting_CostToSpawn: 1
+  Starting_CostToSpawn: 25
   Starting_AttackPower: 1
   Starting_AttackDelay: 1
   Starting_Health: 50
