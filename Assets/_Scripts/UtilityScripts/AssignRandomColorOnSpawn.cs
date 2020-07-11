@@ -10,7 +10,6 @@ public class AssignRandomColorOnSpawn : MonoBehaviour
         Color randColor = GetRandomColor();
         foreach (var mesh in GetComponentsInChildren<Renderer>())
         {
-            
             mesh.material.SetColor("_BaseColor", randColor);
             
         }
@@ -22,6 +21,5 @@ public class AssignRandomColorOnSpawn : MonoBehaviour
             UnityEngine.Random.Range(0f, 1f), //R
             UnityEngine.Random.Range(0f, 1f), //G
             UnityEngine.Random.Range(0f, 1f)); //B
-
     }
 }

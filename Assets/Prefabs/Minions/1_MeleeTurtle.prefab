@@ -368,28 +368,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &376079972168471149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7739720950513862061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87e4df3d68c09d14a8dae8647fe97c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meleeAttackPoint: {fileID: 4264638294877965626}
-  blockAttackPoint: {fileID: 0}
-  ThrowPoint: {fileID: 0}
-  bombPrefab: {fileID: 0}
-  FlashbangThrowPoint: {fileID: 0}
-  FlashbangPrefab: {fileID: 0}
-  bombThrowSpeed: 12
-  KamakazeExplosion: {fileID: 0}
-  HealEffect: {fileID: 0}
-  Wand: {fileID: 0}
 --- !u!95 &721095912
 Animator:
   serializedVersion: 3
@@ -428,6 +406,28 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &376079972168471149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739720950513862061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87e4df3d68c09d14a8dae8647fe97c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meleeAttackPoint: {fileID: 4264638294877965626}
+  blockAttackPoint: {fileID: 0}
+  ThrowPoint: {fileID: 0}
+  bombPrefab: {fileID: 0}
+  FlashbangThrowPoint: {fileID: 0}
+  FlashbangPrefab: {fileID: 0}
+  bombThrowSpeed: 12
+  KamakazeExplosion: {fileID: 0}
+  HealEffect: {fileID: 0}
+  Wand: {fileID: 0}
 --- !u!1 &7988602197713645609
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +563,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3884554188847481635, guid: fba01cf3beab1724c84d55b8ddff243f,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6170866123424724911, guid: 7654b86810ca22048879700188228b7a,
+        type: 3}
     - target: {fileID: -927199367670048503, guid: fba01cf3beab1724c84d55b8ddff243f,
         type: 3}
       propertyPath: m_Name

@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4464114033395647517
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4464114033395647519}
+  - component: {fileID: 4464114033395647518}
+  m_Layer: 0
+  m_Name: PlayerData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4464114033395647519
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464114033395647517}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1096.7692, y: 397.42206, z: -41.125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4464114033395647518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4464114033395647517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d184e166f2730540aa92e860fd18c3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 11400000, guid: 9431bc4d15ed8db438dbb6ca12653c46, type: 2}
+  Money: {fileID: 11400000, guid: 9d16e2381a49ad748adeac3ced43fe2d, type: 2}
+  Minions:
+  - {fileID: 1224970153713450337, guid: 2598815d3c0bc824a9da470df96ea7eb, type: 3}
+  - {fileID: 1224970153713450337, guid: 4a751e70c79aa804d8ec5f1790f7cfd0, type: 3}
+  - {fileID: 1224970153713450337, guid: c79d591ef0cf45540b258a4624bbeeac, type: 3}
+  - {fileID: 1224970153713450337, guid: 80380cfd7773e8c4299c5b031e52da8c, type: 3}
+  - {fileID: 1224970153713450337, guid: ca789bbd72832624a94acdab5705232d, type: 3}
+  - {fileID: 1224970153713450337, guid: 51e8c49d12eb23c41be4a72715655bc7, type: 3}
+  - {fileID: 1224970153713450337, guid: 8bc67755b43b53046be2b176b76e2b41, type: 3}
+  - {fileID: 1224970153713450337, guid: 3c8e7ff8ec0029a4abb7498a91bb4d3b, type: 3}
+  TestUis:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
