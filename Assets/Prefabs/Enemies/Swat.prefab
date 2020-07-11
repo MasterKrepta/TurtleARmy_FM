@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027f20492d6272849a383a9f69975f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectRadius: 20
+  detectRadius: 15
   hitLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -224,14 +224,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2496617105815986358}
-  parentRenderer: {fileID: 627873356627206925}
-  HitColor: {r: 1, g: 0, b: 0, a: 1}
-  originals:
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1258078596
 MonoBehaviour:
   m_ObjectHideFlags: 0

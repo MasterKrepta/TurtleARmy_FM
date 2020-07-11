@@ -21,7 +21,8 @@ public class Wand : MonoBehaviour
     {
         if (Helpers.Paused) { return; }
 
-        if (Input.GetButtonDown("Jump")){
+        if (Input.GetButtonDown("Jump") )
+        {
             BeginCastWand();
                 
             //FireButton();
@@ -37,7 +38,7 @@ public class Wand : MonoBehaviour
     
     public void BeginCastWand()
     {
-        if (CanCast(wandData.Cost) == true)
+        if (CanCast(wandData.Cost))
         {
             anim.SetTrigger("WandAttack");
         }
