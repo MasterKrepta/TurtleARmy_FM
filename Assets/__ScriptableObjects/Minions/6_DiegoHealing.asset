@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 6_DiegoHealing
   m_EditorClassIdentifier: 
   maxLevel: 2
-  MoveSpeed: 40
-  CostToSpawn: 1
+  MoveSpeed: 30
+  CostToSpawn: 30
   AttackPower: 1
   AttackDelay: 1
   Health: 9000

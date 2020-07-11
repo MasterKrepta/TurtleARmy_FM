@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLevel: 2
   MoveSpeed: 30
-  CostToSpawn: 1
+  CostToSpawn: 10
   AttackPower: 1
   AttackDelay: 1
   Health: 20
@@ -31,7 +31,7 @@ MonoBehaviour:
   Starting_AttackDelay: 1
   Starting_Health: 20
   Starting_Cost: 200
-  _upgradeSpeed: 1
-  _upgradeAttackPower: 2
-  _upgradeAttackDelay: 0.3
-  _upgradeHealth: 2
+  _upgradeSpeed: 0
+  _upgradeAttackPower: 0
+  _upgradeAttackDelay: 0
+  _upgradeHealth: 0

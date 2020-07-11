@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLevel: 2
   MoveSpeed: 70
-  CostToSpawn: 1
+  CostToSpawn: 25
   AttackPower: 1
   AttackDelay: 1
   Health: 50
