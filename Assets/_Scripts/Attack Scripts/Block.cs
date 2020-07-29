@@ -21,12 +21,18 @@ public class Block : MonoBehaviour, IAction
         detectTarget.On_AbiltyDeactivate -= CancelBlock;
     }
     public void PeformAction() {
+        //todo is this smart???
+        if (anim.GetBool("Blocking") == true) return;
+
+        
         anim.SetBool("Blocking", true);
+        anim.SetTrigger("Activate");
         
     }
 
     public void CancelBlock() {
         anim.SetBool("Blocking", false);
+        
     }
 
 

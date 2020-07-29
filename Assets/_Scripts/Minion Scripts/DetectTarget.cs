@@ -51,8 +51,7 @@ public class DetectTarget : MonoBehaviour
         {
             if (hit.collider.GetComponent<IHasHealth>() == null)
                 return;
-
-            targetLock = true;
+            EnableTargetLock();
             //Debug.Log($"{this.name} has hit {hit.transform.name}");
             if (Time.time >= nextAbility)
             {
@@ -63,12 +62,20 @@ public class DetectTarget : MonoBehaviour
 
         }
         else {
-            targetLock = false;
+            DisableTargetLock();
             On_AbiltyDeactivate();
         }
 
     }
 
+    public void EnableTargetLock()
+    {
+        targetLock = true;
+    }
+    public void DisableTargetLock()
+    {
+        targetLock = false;
+    }
 
     private void ResetAbility() {
         nextAbility = Time.time + AbilityDelay;
