@@ -15,13 +15,15 @@ public class CombatAnimations : MonoBehaviour
     public GameObject KamakazeExplosion;
 
     public GameObject HealEffect;
-    DetectTarget _detectTarget;
+
+    Turtle _turtle;
 
     [SerializeField] Wand Wand;
 
     private void Start()
     {
-        _detectTarget = this.GetComponentInParent<DetectTarget>();
+
+        _turtle = this.GetComponentInParent<Turtle>();
     }
 
     public void MeleeAttack_On() {
@@ -63,15 +65,17 @@ public class CombatAnimations : MonoBehaviour
         Destroy(go, 1f);
     }
 
-    //TODO figure out how to work this, detection script is keeping us from having this work properly. 
+    
     //! This will lock movement unitil the animation is complete
     public void BlockingOff_BeginAnim()
     {
-        _detectTarget.EnableTargetLock();
+        _turtle.enabled = false;
+    
+        
     }
 
     public void BlockingOff_EndAnim()
     {
-        _detectTarget.DisableTargetLock();
+        _turtle.enabled = true;
     }
 }
