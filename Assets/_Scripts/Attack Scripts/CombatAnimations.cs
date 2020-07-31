@@ -22,7 +22,6 @@ public class CombatAnimations : MonoBehaviour
 
     private void Start()
     {
-
         _turtle = this.GetComponentInParent<Turtle>();
     }
 
@@ -34,7 +33,6 @@ public class CombatAnimations : MonoBehaviour
         meleeAttackPoint.SetActive(false);
         meleeAttackPoint.GetComponent<Collider>().enabled = false;
     }
-
   
     public void FireWandAttack()
     {
@@ -70,8 +68,6 @@ public class CombatAnimations : MonoBehaviour
     public void BlockingOff_BeginAnim()
     {
         _turtle.enabled = false;
-    
-        
     }
 
     public void BlockingOff_EndAnim()

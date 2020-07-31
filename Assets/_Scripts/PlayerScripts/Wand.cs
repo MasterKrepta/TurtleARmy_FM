@@ -46,7 +46,6 @@ public class Wand : MonoBehaviour
 
     public void FireButton()
     {
-
             nextCastTime = Time.time + wandData.CooldownTime;
             Instantiate(wandData.WandPrefab, wandCastPoint.position, Quaternion.identity);
             Resources.Instance.UsePower(wandData.Cost);
