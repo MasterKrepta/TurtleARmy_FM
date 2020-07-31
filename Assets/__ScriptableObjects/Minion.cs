@@ -10,7 +10,7 @@ public class Minion : ScriptableObject
     public float MoveSpeed = 30f;
     public float CostToSpawn = 1f;
     public float AttackPower = 1f;
-    public float AttackDelay = 1.25f; //todo might need to rething this
+    public float AttackDelay = 1.25f; //todo might need to rethink this
     public float Health = 10f;
     public int MaxUpgrades = 20;
     public int CurrentUpgrades = 0;
@@ -30,7 +30,6 @@ public class Minion : ScriptableObject
     public float Starting_Cost = 100f;
     #endregion
 
-    //TODO Remove the number system from the naming for release
     [SerializeField] private float _upgradeSpeed;
 
     

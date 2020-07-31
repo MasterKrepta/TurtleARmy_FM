@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AssignRandomColorOnSpawn : MonoBehaviour
 {
-    //TODO make this work based on just the body color materialnot all of them
     private void Awake()
     {
         Color randColor = GetRandomColor();

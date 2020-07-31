@@ -129,8 +129,8 @@ public class LoadSavePlayerData : MonoBehaviour
 
     public void DELETE_PREFS()
     {
-        //TODO DANGER!!! TESTING ONLY!!!!
-        //todo *******************************************************************
+        //? DANGER!!! TESTING ONLY!!!!
+        //*******************************************************************
         PlayerPrefs.DeleteAll();
         foreach (var m in MinionData)
         {
@@ -138,7 +138,7 @@ public class LoadSavePlayerData : MonoBehaviour
         }
         ConfigureMinionStats();
         Debug.LogWarning("ALL PREFS DELETED");
-        //todo *******************************************************************
+        //*******************************************************************
     }
 
     public void GiveCreditsForTesting()

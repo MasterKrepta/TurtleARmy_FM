@@ -19,10 +19,10 @@ MonoBehaviour:
   AttackDelay: 1
   Health: 10
   MaxUpgrades: 20
-  CurrentUpgrades: 0
+  CurrentUpgrades: 20
   Name: Melee Turtle
   Desc: This is a Common Snapping Turtle - keep your distance
-  CostToUpgrade: 100
+  CostToUpgrade: 3833.7632
   CostIncreasePerUpgrade: 1.2
   MinAttackDelay: 0.25
   Starting_MoveSpeed: 30

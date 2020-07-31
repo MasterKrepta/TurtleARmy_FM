@@ -28,7 +28,7 @@ public class Army : MonoBehaviour
 
         while (canSpawnHere == false)
         {
-            float randomDistance = UnityEngine.Random.Range(-8, 3); //TODO This is our distance for spawning
+            float randomDistance = UnityEngine.Random.Range(-8, 3); //! This is our distance for spawning
             modPos = new Vector3(spawner.position.x + randomDistance, 0, 0);
             canSpawnHere = PreventOverlap(modPos);
             Saftey++;

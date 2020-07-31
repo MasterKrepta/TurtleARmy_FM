@@ -33,7 +33,7 @@ public class StoreLoader : MonoBehaviour
             RefreshUI(i);
         }
 
-        ////TODO remove this after testing
+        //! Remove this after testing
         //Money.CurrentMoney = Money.StartingMoney;
 
         SelectMinion(selected);

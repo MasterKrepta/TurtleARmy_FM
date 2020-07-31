@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "NewCard", menuName = "ScriptableObjects/Card", order = 1)]
 public class UpgradeCard : ScriptableObject
 {
-    public bool IsMaxLevel = false; //todo  This is to prevent the cards from loading on level load
+    public bool IsMaxLevel = false; 
     [SerializeField] int maxLevel = 2;
     enum StatToUpgrade
     {
@@ -31,7 +31,7 @@ public class UpgradeCard : ScriptableObject
         Text = "";
         //Stat = (StatToUpgrade)UnityEngine.Random.Range(0, sizeof(StatToUpgrade));
         minionName = minionToUpgrade.name;
-        //tODO Look at this code closely, I may be calling remove card too frequently
+        //? Look at this code closely, I may be calling remove card too frequently
         switch (Stat)
         {
             case StatToUpgrade.MoveSpeed:
@@ -73,7 +73,7 @@ public class UpgradeCard : ScriptableObject
 
     public void ApplyUpgrade(UpgradeCard card)
     {
-        Helpers.CurrentCard = card; // TODO this is not the best option
+        Helpers.CurrentCard = card; //? this is not the best option
         switch (Stat)
         {
             case StatToUpgrade.MoveSpeed:

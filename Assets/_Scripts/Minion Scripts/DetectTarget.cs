@@ -22,8 +22,8 @@ public class DetectTarget : MonoBehaviour
     }
 
     private void SetDetectRadius() {
-        //TODO research bitwise ops for this. 
-        
+        //research bitwise ops for this. 
+        print("setting radius");
         if (this.CompareTag("Enemy")) {
             hitLayer = ~8;
             
@@ -32,7 +32,7 @@ public class DetectTarget : MonoBehaviour
             hitLayer = ~9;
         }
 
-        Debug.Log(hitLayer);
+        Debug.Log(hitLayer.value);
     }
 
     void FixedUpdate()
@@ -42,7 +42,6 @@ public class DetectTarget : MonoBehaviour
         RaycastHit hit;
 
 
-        //TODO DEBUG THIS. Enemy stops shooting when we are very close
         //TODO change this to include anyone on the other layer so it we stop and attack no matter what. 
         //print($"{gameObject.name} is looking for layer {hitLayer.value}");
 
@@ -58,8 +57,6 @@ public class DetectTarget : MonoBehaviour
                 On_AbilityActivate();
                 ResetAbility();
             }
-
-
         }
         else {
             DisableTargetLock();

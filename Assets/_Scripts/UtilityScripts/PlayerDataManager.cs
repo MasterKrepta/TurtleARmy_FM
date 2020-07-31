@@ -5,92 +5,93 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerDataManager : MonoBehaviour
-{
+//TODO Do we need this class at all? it looks like i am not using it anymore
+//  public class PlayerDataManager : MonoBehaviour
+//{
 
-    public Minion Player;
-    public Money Money;
-    public GameObject[] Minions;
+//    public Minion Player;
+//    public Money Money;
+//    public GameObject[] Minions;
 
-    public Text[] TestUis;
+//    public Text[] TestUis;
     
-    #region Singleton
-    public static PlayerDataManager Instance;
+//    #region Singleton
+//    public static PlayerDataManager Instance;
 
-        private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        DontDestroyOnLoad(this);
+//        private void Awake()
+//    {
+//        if (Instance == null)
+//        {
+//            Instance = this;
+//        }
+//        DontDestroyOnLoad(this);
         
-        UpdateTestUI();
-    }
-    #endregion
+//        UpdateTestUI();
+//    }
+//    #endregion
 
 
-    public void SaveData()
-    {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.stats";
-        FileStream stream = new FileStream(path, FileMode.Create);
+//    public void SaveData()
+//    {
+//        BinaryFormatter formatter = new BinaryFormatter();
+//        string path = Application.persistentDataPath + "/player.stats";
+//        FileStream stream = new FileStream(path, FileMode.Create);
 
 
 
-        //todo Assign current player data
+//        //todo Assign current player data
 
-        formatter.Serialize(stream, Player);
-        stream.Close();
-    }
+//        formatter.Serialize(stream, Player);
+//        stream.Close();
+//    }
 
-    public  void LoadData()
-    {
-        string path = Application.persistentDataPath + "/player.stats";
-        if (File.Exists(path))
-        {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
+//    public  void LoadData()
+//    {
+//        string path = Application.persistentDataPath + "/player.stats";
+//        if (File.Exists(path))
+//        {
+//            BinaryFormatter formatter = new BinaryFormatter();
+//            FileStream stream = new FileStream(path, FileMode.Open);
             
-            Player =  formatter.Deserialize(stream) as Minion;
-            stream.Close();
-            //todo Assign current player data
-            UpdateTestUI();
+//            Player =  formatter.Deserialize(stream) as Minion;
+//            stream.Close();
+//            //todo Assign current player data
+//            UpdateTestUI();
 
-        }
-        else
-        {
-            Debug.LogError($"Save file not found in {path}");
-            UpdateTestUI();
-        }
+//        }
+//        else
+//        {
+//            Debug.LogError($"Save file not found in {path}");
+//            UpdateTestUI();
+//        }
         
-    }
+//    }
     
-    void SaveMinionData()
-    {
-        foreach (var m in Minions)
-        {
-            //todo Assign Minion Data to data object and save;
-        }
-    }
+//    void SaveMinionData()
+//    {
+//        foreach (var m in Minions)
+//        {
+//            //todo Assign Minion Data to data object and save;
+//        }
+//    }
 
-    void UpdateTestUI()
-    {
-        TestUis[0].text = $"Health: {Player.Health.ToString()}";
-        TestUis[1].text = $"Speed: {Player.MoveSpeed.ToString()}";
-        TestUis[2].text = $"Delay: {Player.AttackDelay.ToString()}";
-        TestUis[3].text = $"Power: {Player.AttackPower.ToString()}";
-        TestUis[4].text = $"Money: {Money.CurrentMoney.ToString()}";
-    }
+//    void UpdateTestUI()
+//    {
+//        TestUis[0].text = $"Health: {Player.Health.ToString()}";
+//        TestUis[1].text = $"Speed: {Player.MoveSpeed.ToString()}";
+//        TestUis[2].text = $"Delay: {Player.AttackDelay.ToString()}";
+//        TestUis[3].text = $"Power: {Player.AttackPower.ToString()}";
+//        TestUis[4].text = $"Money: {Money.CurrentMoney.ToString()}";
+//    }
 
-    public void ResetDataToDefaults()
-    {
-        Player.Health = Player.Starting_Health;
-        Player.MoveSpeed = Player.Starting_MoveSpeed;
-        Player.AttackDelay = Player.Starting_AttackDelay;
-        Player.AttackPower = Player.Starting_AttackPower;
-        Money.CurrentMoney = Money.StartingMoney;
+//    public void ResetDataToDefaults()
+//    {
+//        Player.Health = Player.Starting_Health;
+//        Player.MoveSpeed = Player.Starting_MoveSpeed;
+//        Player.AttackDelay = Player.Starting_AttackDelay;
+//        Player.AttackPower = Player.Starting_AttackPower;
+//        Money.CurrentMoney = Money.StartingMoney;
 
-        UpdateTestUI();
-    }
-}
+//        UpdateTestUI();
+//    }
+//}

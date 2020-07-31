@@ -40,7 +40,7 @@ public class EnemyHealth : MonoBehaviour, IHasHealth
         {
 
             Destroy(gameObject);
-            PlayerProgress.Instance.GiveCredits(5);//TODO credits are hardcoded
+            PlayerProgress.Instance.GiveCredits(5);//! credits are hardcoded
             PlayerProgress.Instance.EarnXP(1);
         }
 

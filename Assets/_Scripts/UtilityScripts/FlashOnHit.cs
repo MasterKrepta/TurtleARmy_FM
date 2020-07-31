@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlashOnHit : MonoBehaviour
 {
     [SerializeField] Color HitColor = Color.red;
-    [SerializeField] Color[] originals = new Color[5]; //TODO  Evaluate this number, it should not be this large in the final game. 
+    [SerializeField] Color[] originals = new Color[5]; //!  Evaluate this number, it should not be this large in the final game. 
     Renderer[] renderers;
     float flashTime = 0.2f;
 

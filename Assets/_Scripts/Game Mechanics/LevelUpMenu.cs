@@ -39,9 +39,9 @@ public class LevelUpMenu : MonoBehaviour
         
         var temp = transform.GetChild(0).GetComponentsInChildren<Card>();
 
-        if (Cards.Count == 0) //TODO test this, might not want to keep this 
+        if (Cards.Count == 0) 
         {
-            //TODO call end of upgrade system
+            
         }
 
         foreach (var item in temp)
@@ -74,7 +74,7 @@ public class LevelUpMenu : MonoBehaviour
             }
             else
             {
-                LevelUpMenu.Instance.RemoveCard(item); //todo might not need this
+                LevelUpMenu.Instance.RemoveCard(item); 
             }
         }
 
@@ -96,10 +96,6 @@ public class LevelUpMenu : MonoBehaviour
         this.gameObject.SetActive(true);
         Helpers.OnGamePause();
         
-       
-        //TODO  This may be a mistake, the event causes a stack overflow
-        //Helpers.OnLevelUp(); 
-
     }
 
     public void DeActivateLevelUpMenu()

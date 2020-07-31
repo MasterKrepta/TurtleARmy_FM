@@ -24,7 +24,7 @@ public class DebugTools : MonoBehaviour
     void Awake()
     {
         Card_ScriptableObjs = (UpgradeCard[])FindObjectsOfTypeAll(typeof(UpgradeCard));
-        ResetAllMinions(); //TODo remove this for release
+        ResetAllMinions(); 
         //ResetAllCards();
         //DontDestroyOnLoad(Instance);
     }
@@ -61,7 +61,6 @@ public class DebugTools : MonoBehaviour
 
     public void ResetAllCards()
     {
-        //todo This seems buggy   
         print("Cards Reset");
 
         ResetAllMinions();

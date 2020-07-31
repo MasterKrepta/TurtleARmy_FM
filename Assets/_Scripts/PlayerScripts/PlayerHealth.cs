@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour, IHasHealth
             return;
 
         CurrentHealth -= dmgAmount;
-        //TODO fix player flashing
+        
         GetComponentInChildren<FlashOnHit>().FlashColors();
         StartCoroutine("Cooldown");
         UpdateHealthUI();

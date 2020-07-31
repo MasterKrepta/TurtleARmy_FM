@@ -30,7 +30,6 @@ public class PlayerProgress : MonoBehaviour
 		set 
 		{ 
 			_playerData = value; 
-			//TODO notify game of level up (event)
 		}
 	}
 
@@ -63,8 +62,6 @@ public class PlayerProgress : MonoBehaviour
 		set 
 		{ 
 			_experiance = value;
-			
-			//TODO notify game (event)
 		}
 	}
 
@@ -83,11 +80,11 @@ public class PlayerProgress : MonoBehaviour
 	public void EarnXP(int xpToGain)
 	{
 		Experiance += xpToGain;
-		if (CanLevelUp())
-		{
-			//TODO re-enable  and re-work Level up
-			//LevelUp();
-		}
+		//if (CanLevelUp())
+		//{
+		//	//TODO re-enable  and re-work Level up
+		//	//LevelUp();
+		//}
 	}
 
 	private void LevelUp()
