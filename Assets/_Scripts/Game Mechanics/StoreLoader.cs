@@ -65,13 +65,14 @@ public class StoreLoader : MonoBehaviour
         SelectedName.text = MinionPrefabs[index].Name;
         SelectedDescription.text = MinionPrefabs[index].Desc;
         _canBuy = canBuy();
+        
         RefreshUI(selected);
    
     }
 
     public void BuyUpgrade(int index)
     {
-        index = selected; //TODO might be a better way to do this.
+        //index = selected; //TODO might be a better way to do this.
         var minion = MinionPrefabs[selected];
 
         Money.CurrentMoney -= minion.CostToUpgrade;
@@ -100,11 +101,11 @@ public class StoreLoader : MonoBehaviour
             //TODO change button to display maxed out graphic
             //StoreMinions[i].GetComponentInChildren<Button>().interactable = false;
         }
-        else
-        {
-            upgradeButton.interactable = true;
+        //else
+        //{
+        //    upgradeButton.interactable = true;
 
-        }
+        //}
 
         currentMoney.text =  Mathf.Floor(Money.CurrentMoney).ToString();
         CosttoBuy.text = Mathf.Floor(MinionPrefabs[i].CostToUpgrade).ToString();

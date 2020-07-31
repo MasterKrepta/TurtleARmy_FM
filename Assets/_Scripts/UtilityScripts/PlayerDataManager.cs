@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //TODO Do we need this class at all? it looks like i am not using it anymore
-//  public class PlayerDataManager : MonoBehaviour
+//public class PlayerDataManager : MonoBehaviour
 //{
 
 //    public Minion Player;
@@ -14,18 +14,18 @@ using UnityEngine.UI;
 //    public GameObject[] Minions;
 
 //    public Text[] TestUis;
-    
+
 //    #region Singleton
 //    public static PlayerDataManager Instance;
 
-//        private void Awake()
+//    private void Awake()
 //    {
 //        if (Instance == null)
 //        {
 //            Instance = this;
 //        }
 //        DontDestroyOnLoad(this);
-        
+
 //        UpdateTestUI();
 //    }
 //    #endregion
@@ -45,15 +45,15 @@ using UnityEngine.UI;
 //        stream.Close();
 //    }
 
-//    public  void LoadData()
+//    public void LoadData()
 //    {
 //        string path = Application.persistentDataPath + "/player.stats";
 //        if (File.Exists(path))
 //        {
 //            BinaryFormatter formatter = new BinaryFormatter();
 //            FileStream stream = new FileStream(path, FileMode.Open);
-            
-//            Player =  formatter.Deserialize(stream) as Minion;
+
+//            Player = formatter.Deserialize(stream) as Minion;
 //            stream.Close();
 //            //todo Assign current player data
 //            UpdateTestUI();
@@ -64,9 +64,9 @@ using UnityEngine.UI;
 //            Debug.LogError($"Save file not found in {path}");
 //            UpdateTestUI();
 //        }
-        
+
 //    }
-    
+
 //    void SaveMinionData()
 //    {
 //        foreach (var m in Minions)
