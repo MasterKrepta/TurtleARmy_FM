@@ -4593,16 +4593,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5624417761284121357, guid: ce577a5bf02e9224aa002bc58df3496f,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 5624417761284121357, guid: ce577a5bf02e9224aa002bc58df3496f,
-        type: 3}
-      propertyPath: m_Text
-      value: 'Production: $$$'
-      objectReference: {fileID: 0}
     - target: {fileID: 5624417761284121358, guid: ce577a5bf02e9224aa002bc58df3496f,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -4753,21 +4743,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Army_UI
       objectReference: {fileID: 0}
-    - target: {fileID: 5624417761618987445, guid: ce577a5bf02e9224aa002bc58df3496f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5624417761717829399, guid: ce577a5bf02e9224aa002bc58df3496f,
-        type: 3}
-      propertyPath: m_Spacing.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 5624417761717829402, guid: ce577a5bf02e9224aa002bc58df3496f,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 500
-      objectReference: {fileID: 0}
     - target: {fileID: 5624417761912887795, guid: ce577a5bf02e9224aa002bc58df3496f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4775,8 +4750,8 @@ PrefabInstance:
       objectReference: {fileID: 321664181}
     - target: {fileID: 5624417762083458486, guid: ce577a5bf02e9224aa002bc58df3496f,
         type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 30
+      propertyPath: m_FontData.m_Alignment
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5624417762083458488, guid: ce577a5bf02e9224aa002bc58df3496f,
         type: 3}

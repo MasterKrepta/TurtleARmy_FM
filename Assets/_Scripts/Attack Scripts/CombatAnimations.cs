@@ -16,13 +16,13 @@ public class CombatAnimations : MonoBehaviour
 
     public GameObject HealEffect;
 
-    Turtle _turtle;
+    TurtleMovement _turtle;
 
     [SerializeField] Wand Wand;
 
     private void Start()
     {
-        _turtle = this.GetComponentInParent<Turtle>();
+        _turtle = this.GetComponentInParent<TurtleMovement>();
     }
 
     public void MeleeAttack_On() {
