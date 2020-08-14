@@ -9,9 +9,6 @@ public class FlashOnHit : MonoBehaviour
     Renderer[] renderers;
     float flashTime = 0.2f;
 
-    
-
-
     void Start()
     {
         renderers = GetComponentsInChildren<Renderer>();
@@ -41,25 +38,20 @@ public class FlashOnHit : MonoBehaviour
                     for (int i = 0; i < renderers.Length; i++)
                     {
                         renderers[i].material.SetColor("_BaseColor", originals[i]);
-
                     }
-
                 }
             }
         }
-
     }
 
     void GetOriginalColors()
     {
         foreach (Renderer r in renderers)
         {
-            
-                for (int i = 0; i < renderers.Length; i++)
-                {
-                    originals[i] = renderers[i].material.color;
-                }
-            
+            for (int i = 0; i < renderers.Length; i++)
+            {
+                originals[i] = renderers[i].material.GetColor("_BaseColor");
+            }
         }
     }
 }
