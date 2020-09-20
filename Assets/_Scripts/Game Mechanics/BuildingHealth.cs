@@ -15,12 +15,10 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
     public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
     
-
     [SerializeField] Image image;
 
     private void OnEnable()
     {
-        
         Countdown.enabled = false;
 
         Helpers.OnPlayerDeath += LevelEnd;
@@ -34,7 +32,6 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
             Debug.LogWarning($"{gameObject.name} REFACTOR: There is no Data structure on this gameobject");
 
         }
-
 
         CurrentHealth = MaxHealth;
         image.fillAmount = CurrentHealth / MaxHealth;
@@ -85,7 +82,6 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
             }
         
         }
- 
     }
 
     

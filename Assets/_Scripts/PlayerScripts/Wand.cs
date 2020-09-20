@@ -51,3 +51,4 @@ public class Wand : MonoBehaviour
             Resources.Instance.UsePower(wandData.Cost);
     }
 }
+
