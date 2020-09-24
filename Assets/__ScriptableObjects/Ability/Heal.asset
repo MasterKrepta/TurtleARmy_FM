@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11daeb3d6b8a83447b61fe5a5f3b0ef0, type: 3}
   m_Name: Heal
   m_EditorClassIdentifier: 
+  Type: 0
+  CanUse: 0
   Name: Heal
-  Cost: 15
+  Cost: 5
   PowerAmount: 1
   CooldownTime: 1
-  AbilityPrefab: {fileID: 0}
+  AbilitySpawnPoint: {fileID: 0}
+  AbilityPrefab: {fileID: 9167834873074407558, guid: b0ab36a17307a2c48be0b7504f75edf9,
+    type: 3}
