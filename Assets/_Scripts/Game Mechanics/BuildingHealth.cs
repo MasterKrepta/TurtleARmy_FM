@@ -16,6 +16,7 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
     public float CurrentHealth { get; set; }
     
     [SerializeField] Image image;
+    bool hasSurged = false;
 
     private void OnEnable()
     {
@@ -52,6 +53,11 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
         if (CurrentHealth <= 0)
         {
             LevelEnd();
+        }
+        if (!hasSurged && CurrentHealth <= MaxHealth/2) //Half Health
+        {
+            hasSurged = true;
+            GetComponentInChildren<EnemySpawning>().BeginSurge();
         }
     }
 

@@ -26,6 +26,7 @@ public class Ability : ScriptableObject
 
     public void UseAbility()
     {
+
         AbilitySpawnPoint = GameObject.Find($"{Type.ToString()}SpawnPoint").transform; //TODO how inefficient is this
         Instantiate(AbilityPrefab, AbilitySpawnPoint.position, Quaternion.identity);
         Debug.Log($"{Name} has been fired");

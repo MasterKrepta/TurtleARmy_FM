@@ -10,4 +10,9 @@ public class LevelData : ScriptableObject
     public float SpawnRate = 10f;
     public int BaseHealth = 200;
 
+    [Header("Surge Settings")]
+    public float SurgeSpawnRate = 1.5f;
+    public int NumToSurge = 5;
+    public GameObject[] SurgeEnemyTypes;
+
 }

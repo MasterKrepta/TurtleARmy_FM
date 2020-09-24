@@ -8,12 +8,6 @@ public class EnemySpawning : MonoBehaviour
     float timeToNextSpawn = 0;
     public Collider[] colliders;
     public float radius;
-    // Start is called before the first frame update
-
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -25,15 +19,13 @@ public class EnemySpawning : MonoBehaviour
             int rand = Random.Range(0, data.EnemyTypes.Length);
             GameObject go =  Instantiate (data.EnemyTypes[rand], transform.position, transform.rotation);
 
-
+            //TODO does this actually add value to the visuals?
             Vector3 modPos = transform.position;
             bool canSpawnHere = false;
             int Saftey = 0;
 
-
             while (canSpawnHere == false)
             {
-                
                 canSpawnHere = PreventOverlap(modPos);
                 Saftey++;
 
@@ -71,5 +63,21 @@ public class EnemySpawning : MonoBehaviour
             }
         }
         return true;
+    }
+
+    public void BeginSurge()
+    {
+        print("Surge activated");
+        StartCoroutine(Surge());
+    }
+
+    IEnumerator Surge()
+    {
+        foreach (var e in data.SurgeEnemyTypes)
+        {
+            GameObject go = Instantiate(e, transform.position, transform.rotation);
+            print(go.name + " has spawned");
+            yield return new WaitForSeconds(data.SurgeSpawnRate);
+        }
     }
 }
