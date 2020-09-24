@@ -22,14 +22,14 @@ public class EnemySpawning : MonoBehaviour
             //TODO does this actually add value to the visuals?
             Vector3 modPos = transform.position;
             bool canSpawnHere = false;
-            int Saftey = 0;
+            int Safety = 0;
 
             while (canSpawnHere == false)
             {
                 canSpawnHere = PreventOverlap(modPos);
-                Saftey++;
+                Safety++;
 
-                if (canSpawnHere || Saftey > 50)
+                if (canSpawnHere || Safety > 50)
                 {
                     break;
                 }

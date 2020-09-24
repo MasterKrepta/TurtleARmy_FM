@@ -13,7 +13,6 @@ public class Ability : ScriptableObject
         Edge
     }
 
-
     public AbilityTypes Type = AbilityTypes.Attack;
     public bool CanUse;
     public string Name = "New Ability";

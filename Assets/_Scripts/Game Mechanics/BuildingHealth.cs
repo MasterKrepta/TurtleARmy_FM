@@ -45,7 +45,6 @@ public class BuildingHealth : MonoBehaviour, IHasHealth
 
     public void TakeDamage(float amount)
     {
-
         CurrentHealth -= amount;
         UpdateHealthUI();
         //StartCoroutine("Flash");
