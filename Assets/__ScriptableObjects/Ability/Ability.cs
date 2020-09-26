@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Ability", menuName = "ScriptableObjects/Abilities", order = 3)]
 public class Ability : ScriptableObject
@@ -21,13 +18,13 @@ public class Ability : ScriptableObject
     public float CooldownTime = 1f;
     public Transform AbilitySpawnPoint;
     public Transform AbilityPrefab;
-    
 
     public void UseAbility()
     {
 
         AbilitySpawnPoint = GameObject.Find($"{Type.ToString()}SpawnPoint").transform; //TODO how inefficient is this
         Instantiate(AbilityPrefab, AbilitySpawnPoint.position, Quaternion.identity);
-        Debug.Log($"{Name} has been fired");
+
+        //Debug.Log($"{Name} has been fired");
     }
 }

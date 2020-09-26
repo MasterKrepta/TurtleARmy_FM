@@ -8,6 +8,7 @@ public class Health : MonoBehaviour, IHasHealth
 {
     public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
+    bool damageable = true;
 
     [SerializeField] Image image;
     bool onCooldown = false;
@@ -31,7 +32,7 @@ public class Health : MonoBehaviour, IHasHealth
     }
 
     public void TakeDamage(float dmgAmount) {
-        if (onCooldown)
+        if (onCooldown || damageable == false)
             return;
         
         CurrentHealth -= dmgAmount;
@@ -61,5 +62,19 @@ public class Health : MonoBehaviour, IHasHealth
     {
         print($"{ this.gameObject.name} has been healed");
         CurrentHealth += healAmount;
+    }
+    public void StartInvulerability(float time)
+    {
+        
+        StartCoroutine(Invulerability(time));
+    }
+
+    IEnumerator Invulerability(float time)
+    {
+        print(this.name + " cannot take damage");
+        damageable = false;
+        yield return new WaitForSeconds(time);
+        damageable = true;
+        print(this.name + " CAN take damage");
     }
 }

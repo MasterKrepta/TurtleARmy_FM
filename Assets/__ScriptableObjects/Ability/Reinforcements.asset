@@ -16,8 +16,8 @@ MonoBehaviour:
   CanUse: 0
   Name: Reinforcements
   Cost: 5
-  PowerAmount: 1
+  PowerAmount: 3
   CooldownTime: 1
   AbilitySpawnPoint: {fileID: 0}
-  AbilityPrefab: {fileID: 9167834873074407558, guid: b0ab36a17307a2c48be0b7504f75edf9,
+  AbilityPrefab: {fileID: 4094233907261552476, guid: 4e224ee236578834e8711cc9dcd78796,
     type: 3}
